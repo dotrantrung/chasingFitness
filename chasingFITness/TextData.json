@@ -1,0 +1,152 @@
+{ "practices":[{"bodypart":"AGILITY",
+                        "name": "45 degree knee highs",
+                        "description":"\t•Keep your core tight\n\t•Knees as high as possible\n\t•Heels off the ground",
+                     },
+                     {
+                        "bodypart":"AGILITY",
+                        "name":"explosive burpees",
+                        "description":"\t•Put your body out flat in a hand plank position\n\t•Lift your knees up as high as you can when you jump"
+                     },
+                     {
+                        "bodypart":"AGILITY",
+                        "name": "front and side step shuffle",
+                        "description":"\t•Whichever foot is on the step, the opposite arm is up\n\t•Push off of the step while switching arms and legs"
+                     },
+                     {
+                        "bodypart":"AGILITY",
+                     	"name":"parallel bands",
+                     	"description":"\t•All movement is done on the balls of your feet\n\t•Arm speed matches leg speed"
+                     },
+                     {
+                        "bodypart":"AGILITY",
+                     	"name":"rhythmic v-kicks",
+                     	"description":"\t•Use anything that is narrow with 2 sides (door, corner of a plyo box)\n\t•Try to keep consistent rhythm"
+                     },
+                     {
+                        "bodypart":"AGILITY",
+                     	"name":"speed skater with cone touch",
+                     	"description":"\t•The arm that touches is opposite from the leg that’s on the floor\n\t•Put cones far enough that you have to jump to reach"
+                     },
+                    {
+                        "bodypart":"CORE",
+                        "name": "bench knee flutter kicks to knee crunches",
+                        "description":"\t•Lean back and flex your toes\n\t•Bring your chest towards your knees and away at the same speed as your knees toward your chest"
+                    },
+                    {
+                        "bodypart":"CORE",
+                        "name": "hand plank stability ball knee ups",
+                        "description":"\t•Place ball anywhere from your toes to your knees\n\t•Use the full range of your specific motion"
+                     },
+                     {
+                        "bodypart":"CORE",
+                        "name": "med ball",
+                        "description":"\t•Touch the ball to the side of the straight leg\n\t•Keep feet elevated the whole time"
+                     },
+                     {
+                        "bodypart":"CORE",
+                        "name": "standing single arm obliques",
+                        "description":"\t•Lean as far as you can sideways on both sides"
+                     },
+                     {
+                        "bodypart":"CORE",
+                        "name": "Superman",
+                        "description":"\t•Lock your knees straight\n\t•Arms come completely off the mat"
+                     },
+                     {
+                        "bodypart":"CORE",
+                        "name": "V-ups",
+                        "description":"\t•Opposite hand touches the opposite foot\n\t•Arms and legs move at the same time"
+                     },
+                    {
+                        "bodypart":"FULL BODY",
+                        "name": "dumbbell squat to arm snatch",
+                        "description":"\t•Dumbbell is in between your feet when touching the floor\n\t•Let your elbow lead the way snatching the dumbbell"
+                      },
+                      {
+                        "bodypart":"FULL BODY",
+                        "name": "dumbbell squat and twisting military press",
+                        "description":"\t•Weights go no lower than shoulders when squatting\n\t•Feet stay straight while twisting"
+                      },
+                      {
+                        "bodypart":"FULL BODY",
+                        "name": "stationary lunge to hammer curl press",
+                        "description":"\t•Touch the floor with dumbbells\n\t•Arms go straight up and not at an angle"
+                      },
+                      {
+                        "bodypart":"FULL BODY",
+                        "name": "med ball push up to burpee",
+                        "description":"\t•Let your chest touch the ball if possible\n\t•Place the ball straight above the head"
+                      },
+                      {
+                        "bodypart":"FULL BODY",
+                        "name": "standing dumbbell wood chop",
+                        "description":"\t•Place dumbbell outside of the front knee \n\t•Keep shoulders as upright as possible"
+                      },
+                      {
+                        "bodypart":"FULL BODY",
+                        "name": "weighted spider-man push ups",
+                        "description":"\t•The arm that is the most forward is opposite of the knee that is most forward\n\t•The exercise can be done with or without the foot plates"
+                      },
+                      {
+                        "bodypart":"LOWER BODY",
+                        "name": "curtsy lunge",
+                        "description":"\t•Stationary foot stays straight\n\t•Keep your shoulders as far back as possible while going down"
+                       },
+                       {
+                        "bodypart":"LOWER BODY",
+                        "name": "dumbbell walking lunges",
+                        "description":"\t•Go low but do not let your knee touch the floor"
+                       },
+                       {
+                        "bodypart":"LOWER BODY",
+                        "name": "lateral lunge with plate slide",
+                        "description":"\t•Keep trailing leg stiff while dragging the plate\n\t•Keep more pressure on the heel of the lead leg"
+                       },
+                       {
+                        "bodypart":"LOWER BODY",
+                        "name": "med ball pump and jump",
+                        "description":"\t•Put the pressure on your heels on the squat"
+                       },
+                       {
+                        "bodypart":"LOWER BODY",
+                        "name": "single leg negative sit squats",
+                        "description":"\t•Off leg is parallel to the floor\n\t•Go down with a controlled slower speed"
+                       },
+                       {
+                        "bodypart":"LOWER BODY",
+                        "name": "single leg bench squat",
+                        "description":"\t•Don’t let your knee go out further than your foot\n\t•The majority of pressure is on the heel of the front foot"
+                       },
+                        {
+                        "bodypart":"UPPER BODY",
+                        "name": "alternating frontal and lateral deltoid lifts",
+                        "description":"\t•Bring up arms so they are parallel to the floor"
+                        },
+                        {
+                        "bodypart":"UPPER BODY",
+                        "name": "dumbbell alternating drop chest press",
+                        "description":"\t•The middle of the dumbbells should be over the middle of your chest"
+                        },
+                        {
+                        "bodypart":"UPPER BODY",
+                        "name": "incline bench dumbbell rows",
+                        "description":"\t•Squeeze your back while driving your elbows backwards"
+                        },
+                        {
+                        "bodypart":"UPPER BODY",
+                        "name": "press pull biceps curls",
+                        "description":"\t•After curling the dumbbells press them forward\n\t•Bring them back quickly"
+                        },
+                        {
+                        "bodypart":"UPPER BODY",
+                        "name": "rollie pollie med ball push up",
+                        "description":"\t•Keep the ball as close to the shoulder as possible"
+                        },
+                        {
+                        "bodypart":"UPPER BODY",
+                        "name": "stability ball triceps extension",
+                        "description":"\t•Place ball anywhere in between your heels and knees\n\t•Back should graze the bench on the way down"
+                        }]
+        }
+
+               

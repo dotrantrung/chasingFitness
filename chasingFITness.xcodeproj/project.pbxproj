@@ -7,15 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021BC1631C79C7DF009CEC4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021BC1621C79C7DF009CEC4C /* Main.storyboard */; };
+		024383861C462675007BCE3F /* ListOfPractices.m in Sources */ = {isa = PBXBuildFile; fileRef = 024383851C462675007BCE3F /* ListOfPractices.m */; };
+		026B017F1C48A36B005FED38 /* collectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 026B017E1C48A36B005FED38 /* collectionCell.m */; };
+		026B01851C48BD40005FED38 /* SelectTimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026B01841C48BD40005FED38 /* SelectTimerController.m */; };
+		02747D111C40E54A0023D9C8 /* ListOfExercises.m in Sources */ = {isa = PBXBuildFile; fileRef = 02747D101C40E54A0023D9C8 /* ListOfExercises.m */; };
+		02747D141C40E6320023D9C8 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02747D131C40E6320023D9C8 /* CustomCell.m */; };
 		0276BE841C40958200DCB510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276BE831C40958200DCB510 /* main.m */; };
 		0276BE871C40958200DCB510 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276BE861C40958200DCB510 /* AppDelegate.m */; };
 		0276BE8A1C40958200DCB510 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276BE891C40958200DCB510 /* ViewController.m */; };
-		0276BE8D1C40958200DCB510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0276BE8B1C40958200DCB510 /* Main.storyboard */; };
 		0276BE901C40958200DCB510 /* chasingFITness.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0276BE8E1C40958200DCB510 /* chasingFITness.xcdatamodeld */; };
 		0276BE921C40958200DCB510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0276BE911C40958200DCB510 /* Assets.xcassets */; };
 		0276BE951C40958200DCB510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0276BE931C40958200DCB510 /* LaunchScreen.storyboard */; };
 		0276BEA01C40958200DCB510 /* chasingFITnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276BE9F1C40958200DCB510 /* chasingFITnessTests.m */; };
 		0276BEAB1C40958200DCB510 /* chasingFITnessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276BEAA1C40958200DCB510 /* chasingFITnessUITests.m */; };
+		028111A61C643606007DE964 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 028111A51C643606007DE964 /* playButton.png */; };
+		028111B71C644914007DE964 /* 45 degree knee highs.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B11C644914007DE964 /* 45 degree knee highs.mov */; };
+		028111B81C644914007DE964 /* explosive burpees.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B21C644914007DE964 /* explosive burpees.mov */; };
+		028111B91C644914007DE964 /* front and side step shuffle.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B31C644914007DE964 /* front and side step shuffle.mov */; };
+		028111BA1C644914007DE964 /* parallel bands.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B41C644914007DE964 /* parallel bands.mov */; };
+		028111BB1C644914007DE964 /* rhythmic v-kicks.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B51C644914007DE964 /* rhythmic v-kicks.mov */; };
+		028111BC1C644914007DE964 /* speed skater with cone touch.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B61C644914007DE964 /* speed skater with cone touch.mov */; };
+		028111C41C644A06007DE964 /* bench knee flutter kicks to knee crunches.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111BE1C644A06007DE964 /* bench knee flutter kicks to knee crunches.mov */; };
+		028111C51C644A06007DE964 /* hand plank stability ball knee ups.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111BF1C644A06007DE964 /* hand plank stability ball knee ups.mov */; };
+		028111C61C644A06007DE964 /* med ball.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111C01C644A06007DE964 /* med ball.mov */; };
+		028111C71C644A06007DE964 /* standing single arm obliques.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111C11C644A06007DE964 /* standing single arm obliques.mov */; };
+		028111C81C644A06007DE964 /* Superman.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111C21C644A06007DE964 /* Superman.mov */; };
+		028111C91C644A06007DE964 /* V-ups.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111C31C644A06007DE964 /* V-ups.mov */; };
+		028111D11C644A86007DE964 /* dumbbell squat and twisting military press.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111CB1C644A86007DE964 /* dumbbell squat and twisting military press.mov */; };
+		028111D21C644A86007DE964 /* dumbbell squat to arm snatch.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111CC1C644A86007DE964 /* dumbbell squat to arm snatch.mov */; };
+		028111D31C644A86007DE964 /* med ball push up to burpee.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111CD1C644A86007DE964 /* med ball push up to burpee.mov */; };
+		028111D41C644A86007DE964 /* standing dumbbell wood chop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111CE1C644A86007DE964 /* standing dumbbell wood chop.mov */; };
+		028111D51C644A86007DE964 /* stationary lunge to hammer curl press.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111CF1C644A86007DE964 /* stationary lunge to hammer curl press.mov */; };
+		028111D61C644A86007DE964 /* weighted spider-man push ups.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111D01C644A86007DE964 /* weighted spider-man push ups.mov */; };
+		028111DE1C644AD7007DE964 /* curtsy lunge.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111D81C644AD7007DE964 /* curtsy lunge.mov */; };
+		028111DF1C644AD7007DE964 /* dumbbell walking lunges.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111D91C644AD7007DE964 /* dumbbell walking lunges.mov */; };
+		028111E01C644AD7007DE964 /* lateral lunge with plate slide.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111DA1C644AD7007DE964 /* lateral lunge with plate slide.mov */; };
+		028111E11C644AD7007DE964 /* med ball pump and jump.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111DB1C644AD7007DE964 /* med ball pump and jump.mov */; };
+		028111E21C644AD7007DE964 /* single leg bench squat.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111DC1C644AD7007DE964 /* single leg bench squat.mov */; };
+		028111E31C644AD7007DE964 /* single leg negative sit squats.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111DD1C644AD7007DE964 /* single leg negative sit squats.mov */; };
+		028111EB1C644B4A007DE964 /* alternating frontal and lateral deltoid lifts.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111E51C644B4A007DE964 /* alternating frontal and lateral deltoid lifts.mov */; };
+		028111EC1C644B4A007DE964 /* dumbbell alternating drop chest press.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111E61C644B4A007DE964 /* dumbbell alternating drop chest press.mov */; };
+		028111ED1C644B4A007DE964 /* incline bench dumbbell rows.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111E71C644B4A007DE964 /* incline bench dumbbell rows.mov */; };
+		028111EE1C644B4A007DE964 /* press pull biceps curls.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111E81C644B4A007DE964 /* press pull biceps curls.mov */; };
+		028111EF1C644B4A007DE964 /* rollie pollie med ball push up.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111E91C644B4A007DE964 /* rollie pollie med ball push up.mov */; };
+		028111F01C644B4A007DE964 /* stability ball triceps extension.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111EA1C644B4A007DE964 /* stability ball triceps extension.mov */; };
+		028117FD1C509E3C001E45AE /* AVPlayerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 028117FC1C509E3C001E45AE /* AVPlayerClass.m */; };
+		028926D01C4E22220059C2A4 /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 028926CF1C4E22220059C2A4 /* VideoView.m */; };
+		028926D51C4E2A580059C2A4 /* chasingFIT logotypeBLACK.png in Resources */ = {isa = PBXBuildFile; fileRef = 028926D31C4E2A580059C2A4 /* chasingFIT logotypeBLACK.png */; };
+		028926D61C4E2A580059C2A4 /* chasingFIT logotypeWHITE.png in Resources */ = {isa = PBXBuildFile; fileRef = 028926D41C4E2A580059C2A4 /* chasingFIT logotypeWHITE.png */; };
+		029590B21C61CD3700B2F304 /* readData.m in Sources */ = {isa = PBXBuildFile; fileRef = 029590B11C61CD3700B2F304 /* readData.m */; };
+		029590B61C61E1AD00B2F304 /* TextData.json in Resources */ = {isa = PBXBuildFile; fileRef = 029590B51C61E1AD00B2F304 /* TextData.json */; };
+		029590BC1C61F77900B2F304 /* intro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 029590BB1C61F77900B2F304 /* intro.mov */; };
+		029590BF1C6203B300B2F304 /* buildWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029590BE1C6203B300B2F304 /* buildWorkoutViewController.m */; };
+		02DBD90E1C4428DD001DAA83 /* Agility_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD9091C4428DD001DAA83 /* Agility_Icon.jpg */; };
+		02DBD90F1C4428DD001DAA83 /* Core_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD90A1C4428DD001DAA83 /* Core_Icon.jpg */; };
+		02DBD9101C4428DD001DAA83 /* Full Body Icon_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD90B1C4428DD001DAA83 /* Full Body Icon_Icon.jpg */; };
+		02DBD9111C4428DD001DAA83 /* Lower Body_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD90C1C4428DD001DAA83 /* Lower Body_Icon.jpg */; };
+		02DBD9121C4428DD001DAA83 /* Upper Body_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD90D1C4428DD001DAA83 /* Upper Body_Icon.jpg */; };
+		02DBD9151C442A74001DAA83 /* Full Body Icon_Splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD9141C442A74001DAA83 /* Full Body Icon_Splash.jpg */; };
+		02DBD9171C442B5C001DAA83 /* slider3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD9161C442B5C001DAA83 /* slider3.jpg */; };
+		02DBD9191C442D77001DAA83 /* menuButtonImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD9181C442D77001DAA83 /* menuButtonImage.png */; };
+		02EDB0FC1C436D6900EC0B03 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02EDB0FB1C436D6900EC0B03 /* SimpleTableCell.xib */; };
+		02EDB1071C43AEAF00EC0B03 /* myMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDB1061C43AEAF00EC0B03 /* myMenuView.m */; };
+		02EDB1091C43AED000EC0B03 /* myMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02EDB1081C43AED000EC0B03 /* myMenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +91,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021BC1621C79C7DF009CEC4C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		024383841C462675007BCE3F /* ListOfPractices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfPractices.h; path = ../ListOfPractices.h; sourceTree = "<group>"; };
+		024383851C462675007BCE3F /* ListOfPractices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfPractices.m; path = ../ListOfPractices.m; sourceTree = "<group>"; };
+		026B017D1C48A36B005FED38 /* collectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionCell.h; sourceTree = "<group>"; };
+		026B017E1C48A36B005FED38 /* collectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionCell.m; sourceTree = "<group>"; };
+		026B01831C48BD40005FED38 /* SelectTimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTimerController.h; sourceTree = "<group>"; };
+		026B01841C48BD40005FED38 /* SelectTimerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTimerController.m; sourceTree = "<group>"; };
+		02747D0F1C40E54A0023D9C8 /* ListOfExercises.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListOfExercises.h; sourceTree = "<group>"; };
+		02747D101C40E54A0023D9C8 /* ListOfExercises.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListOfExercises.m; sourceTree = "<group>"; };
+		02747D121C40E6320023D9C8 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		02747D131C40E6320023D9C8 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		0276BE7F1C40958200DCB510 /* chasingFITness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chasingFITness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0276BE831C40958200DCB510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0276BE851C40958200DCB510 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0276BE861C40958200DCB510 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0276BE881C40958200DCB510 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0276BE891C40958200DCB510 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0276BE8C1C40958200DCB510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0276BE8F1C40958200DCB510 /* chasingFITness.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = chasingFITness.xcdatamodel; sourceTree = "<group>"; };
 		0276BE911C40958200DCB510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0276BE941C40958200DCB510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +118,62 @@
 		0276BEA61C40958200DCB510 /* chasingFITnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chasingFITnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0276BEAA1C40958200DCB510 /* chasingFITnessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chasingFITnessUITests.m; sourceTree = "<group>"; };
 		0276BEAC1C40958200DCB510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		028111A51C643606007DE964 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		028111B11C644914007DE964 /* 45 degree knee highs.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "45 degree knee highs.mov"; sourceTree = "<group>"; };
+		028111B21C644914007DE964 /* explosive burpees.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "explosive burpees.mov"; sourceTree = "<group>"; };
+		028111B31C644914007DE964 /* front and side step shuffle.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "front and side step shuffle.mov"; sourceTree = "<group>"; };
+		028111B41C644914007DE964 /* parallel bands.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "parallel bands.mov"; sourceTree = "<group>"; };
+		028111B51C644914007DE964 /* rhythmic v-kicks.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "rhythmic v-kicks.mov"; sourceTree = "<group>"; };
+		028111B61C644914007DE964 /* speed skater with cone touch.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "speed skater with cone touch.mov"; sourceTree = "<group>"; };
+		028111BE1C644A06007DE964 /* bench knee flutter kicks to knee crunches.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "bench knee flutter kicks to knee crunches.mov"; sourceTree = "<group>"; };
+		028111BF1C644A06007DE964 /* hand plank stability ball knee ups.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "hand plank stability ball knee ups.mov"; sourceTree = "<group>"; };
+		028111C01C644A06007DE964 /* med ball.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "med ball.mov"; sourceTree = "<group>"; };
+		028111C11C644A06007DE964 /* standing single arm obliques.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "standing single arm obliques.mov"; sourceTree = "<group>"; };
+		028111C21C644A06007DE964 /* Superman.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Superman.mov; sourceTree = "<group>"; };
+		028111C31C644A06007DE964 /* V-ups.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "V-ups.mov"; sourceTree = "<group>"; };
+		028111CB1C644A86007DE964 /* dumbbell squat and twisting military press.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dumbbell squat and twisting military press.mov"; sourceTree = "<group>"; };
+		028111CC1C644A86007DE964 /* dumbbell squat to arm snatch.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dumbbell squat to arm snatch.mov"; sourceTree = "<group>"; };
+		028111CD1C644A86007DE964 /* med ball push up to burpee.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "med ball push up to burpee.mov"; sourceTree = "<group>"; };
+		028111CE1C644A86007DE964 /* standing dumbbell wood chop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "standing dumbbell wood chop.mov"; sourceTree = "<group>"; };
+		028111CF1C644A86007DE964 /* stationary lunge to hammer curl press.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "stationary lunge to hammer curl press.mov"; sourceTree = "<group>"; };
+		028111D01C644A86007DE964 /* weighted spider-man push ups.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "weighted spider-man push ups.mov"; sourceTree = "<group>"; };
+		028111D81C644AD7007DE964 /* curtsy lunge.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "curtsy lunge.mov"; sourceTree = "<group>"; };
+		028111D91C644AD7007DE964 /* dumbbell walking lunges.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dumbbell walking lunges.mov"; sourceTree = "<group>"; };
+		028111DA1C644AD7007DE964 /* lateral lunge with plate slide.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "lateral lunge with plate slide.mov"; sourceTree = "<group>"; };
+		028111DB1C644AD7007DE964 /* med ball pump and jump.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "med ball pump and jump.mov"; sourceTree = "<group>"; };
+		028111DC1C644AD7007DE964 /* single leg bench squat.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "single leg bench squat.mov"; sourceTree = "<group>"; };
+		028111DD1C644AD7007DE964 /* single leg negative sit squats.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "single leg negative sit squats.mov"; sourceTree = "<group>"; };
+		028111E51C644B4A007DE964 /* alternating frontal and lateral deltoid lifts.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "alternating frontal and lateral deltoid lifts.mov"; sourceTree = "<group>"; };
+		028111E61C644B4A007DE964 /* dumbbell alternating drop chest press.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dumbbell alternating drop chest press.mov"; sourceTree = "<group>"; };
+		028111E71C644B4A007DE964 /* incline bench dumbbell rows.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "incline bench dumbbell rows.mov"; sourceTree = "<group>"; };
+		028111E81C644B4A007DE964 /* press pull biceps curls.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "press pull biceps curls.mov"; sourceTree = "<group>"; };
+		028111E91C644B4A007DE964 /* rollie pollie med ball push up.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "rollie pollie med ball push up.mov"; sourceTree = "<group>"; };
+		028111EA1C644B4A007DE964 /* stability ball triceps extension.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "stability ball triceps extension.mov"; sourceTree = "<group>"; };
+		028117FB1C509E3C001E45AE /* AVPlayerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerClass.h; sourceTree = "<group>"; };
+		028117FC1C509E3C001E45AE /* AVPlayerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerClass.m; sourceTree = "<group>"; };
+		028926CB1C4E1A8D0059C2A4 /* chasingFITness-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "chasingFITness-Bridging-Header.h"; sourceTree = "<group>"; };
+		028926CE1C4E22220059C2A4 /* VideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoView.h; path = ../VideoView.h; sourceTree = "<group>"; };
+		028926CF1C4E22220059C2A4 /* VideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoView.m; path = ../VideoView.m; sourceTree = "<group>"; };
+		028926D31C4E2A580059C2A4 /* chasingFIT logotypeBLACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chasingFIT logotypeBLACK.png"; sourceTree = "<group>"; };
+		028926D41C4E2A580059C2A4 /* chasingFIT logotypeWHITE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chasingFIT logotypeWHITE.png"; sourceTree = "<group>"; };
+		029590B01C61CD3700B2F304 /* readData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readData.h; sourceTree = "<group>"; };
+		029590B11C61CD3700B2F304 /* readData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = readData.m; sourceTree = "<group>"; };
+		029590B51C61E1AD00B2F304 /* TextData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TextData.json; sourceTree = "<group>"; };
+		029590BB1C61F77900B2F304 /* intro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = intro.mov; sourceTree = "<group>"; };
+		029590BD1C6203B300B2F304 /* buildWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buildWorkoutViewController.h; sourceTree = "<group>"; };
+		029590BE1C6203B300B2F304 /* buildWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buildWorkoutViewController.m; sourceTree = "<group>"; };
+		02DBD9091C4428DD001DAA83 /* Agility_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Agility_Icon.jpg; sourceTree = "<group>"; };
+		02DBD90A1C4428DD001DAA83 /* Core_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Core_Icon.jpg; sourceTree = "<group>"; };
+		02DBD90B1C4428DD001DAA83 /* Full Body Icon_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Full Body Icon_Icon.jpg"; sourceTree = "<group>"; };
+		02DBD90C1C4428DD001DAA83 /* Lower Body_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lower Body_Icon.jpg"; sourceTree = "<group>"; };
+		02DBD90D1C4428DD001DAA83 /* Upper Body_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Upper Body_Icon.jpg"; sourceTree = "<group>"; };
+		02DBD9141C442A74001DAA83 /* Full Body Icon_Splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Full Body Icon_Splash.jpg"; sourceTree = "<group>"; };
+		02DBD9161C442B5C001DAA83 /* slider3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slider3.jpg; sourceTree = "<group>"; };
+		02DBD9181C442D77001DAA83 /* menuButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButtonImage.png; sourceTree = "<group>"; };
+		02EDB0FB1C436D6900EC0B03 /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		02EDB1051C43AEAF00EC0B03 /* myMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myMenuView.h; path = ../myMenuView.h; sourceTree = "<group>"; };
+		02EDB1061C43AEAF00EC0B03 /* myMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myMenuView.m; path = ../myMenuView.m; sourceTree = "<group>"; };
+		02EDB1081C43AED000EC0B03 /* myMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myMenuView.xib; path = ../myMenuView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +201,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024383831C46253C007BCE3F /* MenuForAllView */ = {
+			isa = PBXGroup;
+			children = (
+				02EDB1051C43AEAF00EC0B03 /* myMenuView.h */,
+				02EDB1061C43AEAF00EC0B03 /* myMenuView.m */,
+				02EDB1081C43AED000EC0B03 /* myMenuView.xib */,
+			);
+			name = MenuForAllView;
+			sourceTree = "<group>";
+		};
 		0276BE761C40958200DCB510 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +218,7 @@
 				0276BE9E1C40958200DCB510 /* chasingFITnessTests */,
 				0276BEA91C40958200DCB510 /* chasingFITnessUITests */,
 				0276BE801C40958200DCB510 /* Products */,
+				028926CB1C4E1A8D0059C2A4 /* chasingFITness-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +239,25 @@
 				0276BE861C40958200DCB510 /* AppDelegate.m */,
 				0276BE881C40958200DCB510 /* ViewController.h */,
 				0276BE891C40958200DCB510 /* ViewController.m */,
-				0276BE8B1C40958200DCB510 /* Main.storyboard */,
+				029590BD1C6203B300B2F304 /* buildWorkoutViewController.h */,
+				029590BE1C6203B300B2F304 /* buildWorkoutViewController.m */,
+				02747D0F1C40E54A0023D9C8 /* ListOfExercises.h */,
+				02747D101C40E54A0023D9C8 /* ListOfExercises.m */,
+				021BC1621C79C7DF009CEC4C /* Main.storyboard */,
+				029590B01C61CD3700B2F304 /* readData.h */,
+				029590B11C61CD3700B2F304 /* readData.m */,
+				024383841C462675007BCE3F /* ListOfPractices.h */,
+				024383851C462675007BCE3F /* ListOfPractices.m */,
+				026B01831C48BD40005FED38 /* SelectTimerController.h */,
+				026B01841C48BD40005FED38 /* SelectTimerController.m */,
+				028926CE1C4E22220059C2A4 /* VideoView.h */,
+				028926CF1C4E22220059C2A4 /* VideoView.m */,
+				028117FB1C509E3C001E45AE /* AVPlayerClass.h */,
+				028117FC1C509E3C001E45AE /* AVPlayerClass.m */,
+				029590B51C61E1AD00B2F304 /* TextData.json */,
+				029590C01C6203BF00B2F304 /* CustomLargeCell */,
+				024383831C46253C007BCE3F /* MenuForAllView */,
+				02EDB1041C43AACF00EC0B03 /* Large Cell */,
 				0276BE911C40958200DCB510 /* Assets.xcassets */,
 				0276BE931C40958200DCB510 /* LaunchScreen.storyboard */,
 				0276BE961C40958200DCB510 /* Info.plist */,
@@ -120,6 +270,19 @@
 		0276BE821C40958200DCB510 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				028111F11C644B53007DE964 /* Upper Body */,
+				028111E41C644AEA007DE964 /* Lower Body */,
+				028111D71C644A8C007DE964 /* Full Body */,
+				028111CA1C644A0D007DE964 /* Core */,
+				028111BD1C64491A007DE964 /* Agility */,
+				028111A51C643606007DE964 /* playButton.png */,
+				029590BB1C61F77900B2F304 /* intro.mov */,
+				028926D31C4E2A580059C2A4 /* chasingFIT logotypeBLACK.png */,
+				028926D41C4E2A580059C2A4 /* chasingFIT logotypeWHITE.png */,
+				02DBD9181C442D77001DAA83 /* menuButtonImage.png */,
+				02DBD9161C442B5C001DAA83 /* slider3.jpg */,
+				02DBD9141C442A74001DAA83 /* Full Body Icon_Splash.jpg */,
+				02DBD9131C4428F2001DAA83 /* CustomMenuImage */,
 				0276BE831C40958200DCB510 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +304,102 @@
 				0276BEAC1C40958200DCB510 /* Info.plist */,
 			);
 			path = chasingFITnessUITests;
+			sourceTree = "<group>";
+		};
+		028111BD1C64491A007DE964 /* Agility */ = {
+			isa = PBXGroup;
+			children = (
+				028111B11C644914007DE964 /* 45 degree knee highs.mov */,
+				028111B21C644914007DE964 /* explosive burpees.mov */,
+				028111B31C644914007DE964 /* front and side step shuffle.mov */,
+				028111B41C644914007DE964 /* parallel bands.mov */,
+				028111B51C644914007DE964 /* rhythmic v-kicks.mov */,
+				028111B61C644914007DE964 /* speed skater with cone touch.mov */,
+			);
+			name = Agility;
+			sourceTree = "<group>";
+		};
+		028111CA1C644A0D007DE964 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				028111BE1C644A06007DE964 /* bench knee flutter kicks to knee crunches.mov */,
+				028111BF1C644A06007DE964 /* hand plank stability ball knee ups.mov */,
+				028111C01C644A06007DE964 /* med ball.mov */,
+				028111C11C644A06007DE964 /* standing single arm obliques.mov */,
+				028111C21C644A06007DE964 /* Superman.mov */,
+				028111C31C644A06007DE964 /* V-ups.mov */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		028111D71C644A8C007DE964 /* Full Body */ = {
+			isa = PBXGroup;
+			children = (
+				028111CB1C644A86007DE964 /* dumbbell squat and twisting military press.mov */,
+				028111CC1C644A86007DE964 /* dumbbell squat to arm snatch.mov */,
+				028111CD1C644A86007DE964 /* med ball push up to burpee.mov */,
+				028111CE1C644A86007DE964 /* standing dumbbell wood chop.mov */,
+				028111CF1C644A86007DE964 /* stationary lunge to hammer curl press.mov */,
+				028111D01C644A86007DE964 /* weighted spider-man push ups.mov */,
+			);
+			name = "Full Body";
+			sourceTree = "<group>";
+		};
+		028111E41C644AEA007DE964 /* Lower Body */ = {
+			isa = PBXGroup;
+			children = (
+				028111D81C644AD7007DE964 /* curtsy lunge.mov */,
+				028111D91C644AD7007DE964 /* dumbbell walking lunges.mov */,
+				028111DA1C644AD7007DE964 /* lateral lunge with plate slide.mov */,
+				028111DB1C644AD7007DE964 /* med ball pump and jump.mov */,
+				028111DC1C644AD7007DE964 /* single leg bench squat.mov */,
+				028111DD1C644AD7007DE964 /* single leg negative sit squats.mov */,
+			);
+			name = "Lower Body";
+			sourceTree = "<group>";
+		};
+		028111F11C644B53007DE964 /* Upper Body */ = {
+			isa = PBXGroup;
+			children = (
+				028111E51C644B4A007DE964 /* alternating frontal and lateral deltoid lifts.mov */,
+				028111E61C644B4A007DE964 /* dumbbell alternating drop chest press.mov */,
+				028111E71C644B4A007DE964 /* incline bench dumbbell rows.mov */,
+				028111E81C644B4A007DE964 /* press pull biceps curls.mov */,
+				028111E91C644B4A007DE964 /* rollie pollie med ball push up.mov */,
+				028111EA1C644B4A007DE964 /* stability ball triceps extension.mov */,
+			);
+			name = "Upper Body";
+			sourceTree = "<group>";
+		};
+		029590C01C6203BF00B2F304 /* CustomLargeCell */ = {
+			isa = PBXGroup;
+			children = (
+				026B017D1C48A36B005FED38 /* collectionCell.h */,
+				026B017E1C48A36B005FED38 /* collectionCell.m */,
+			);
+			name = CustomLargeCell;
+			sourceTree = "<group>";
+		};
+		02DBD9131C4428F2001DAA83 /* CustomMenuImage */ = {
+			isa = PBXGroup;
+			children = (
+				02DBD9091C4428DD001DAA83 /* Agility_Icon.jpg */,
+				02DBD90A1C4428DD001DAA83 /* Core_Icon.jpg */,
+				02DBD90B1C4428DD001DAA83 /* Full Body Icon_Icon.jpg */,
+				02DBD90C1C4428DD001DAA83 /* Lower Body_Icon.jpg */,
+				02DBD90D1C4428DD001DAA83 /* Upper Body_Icon.jpg */,
+			);
+			name = CustomMenuImage;
+			sourceTree = "<group>";
+		};
+		02EDB1041C43AACF00EC0B03 /* Large Cell */ = {
+			isa = PBXGroup;
+			children = (
+				02EDB0FB1C436D6900EC0B03 /* SimpleTableCell.xib */,
+				02747D121C40E6320023D9C8 /* CustomCell.h */,
+				02747D131C40E6320023D9C8 /* CustomCell.m */,
+			);
+			name = "Large Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +469,7 @@
 				TargetAttributes = {
 					0276BE7E1C40958200DCB510 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = VAUJ7GY4KD;
 					};
 					0276BE9A1C40958200DCB510 = {
 						CreatedOnToolsVersion = 7.2;
@@ -246,9 +506,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028111D31C644A86007DE964 /* med ball push up to burpee.mov in Resources */,
+				02DBD9191C442D77001DAA83 /* menuButtonImage.png in Resources */,
+				02DBD9101C4428DD001DAA83 /* Full Body Icon_Icon.jpg in Resources */,
+				028111E01C644AD7007DE964 /* lateral lunge with plate slide.mov in Resources */,
+				028111B81C644914007DE964 /* explosive burpees.mov in Resources */,
+				028111E21C644AD7007DE964 /* single leg bench squat.mov in Resources */,
+				02DBD9111C4428DD001DAA83 /* Lower Body_Icon.jpg in Resources */,
+				028111C91C644A06007DE964 /* V-ups.mov in Resources */,
+				028111BB1C644914007DE964 /* rhythmic v-kicks.mov in Resources */,
+				028926D61C4E2A580059C2A4 /* chasingFIT logotypeWHITE.png in Resources */,
+				028111E31C644AD7007DE964 /* single leg negative sit squats.mov in Resources */,
+				028111BA1C644914007DE964 /* parallel bands.mov in Resources */,
+				029590B61C61E1AD00B2F304 /* TextData.json in Resources */,
+				028111C71C644A06007DE964 /* standing single arm obliques.mov in Resources */,
 				0276BE951C40958200DCB510 /* LaunchScreen.storyboard in Resources */,
+				028111C81C644A06007DE964 /* Superman.mov in Resources */,
+				028111D41C644A86007DE964 /* standing dumbbell wood chop.mov in Resources */,
+				028111D61C644A86007DE964 /* weighted spider-man push ups.mov in Resources */,
+				02EDB1091C43AED000EC0B03 /* myMenuView.xib in Resources */,
+				028111A61C643606007DE964 /* playButton.png in Resources */,
+				028111EB1C644B4A007DE964 /* alternating frontal and lateral deltoid lifts.mov in Resources */,
+				02DBD9171C442B5C001DAA83 /* slider3.jpg in Resources */,
+				028111C51C644A06007DE964 /* hand plank stability ball knee ups.mov in Resources */,
+				028111C61C644A06007DE964 /* med ball.mov in Resources */,
+				02DBD90E1C4428DD001DAA83 /* Agility_Icon.jpg in Resources */,
+				028111D21C644A86007DE964 /* dumbbell squat to arm snatch.mov in Resources */,
+				028926D51C4E2A580059C2A4 /* chasingFIT logotypeBLACK.png in Resources */,
+				021BC1631C79C7DF009CEC4C /* Main.storyboard in Resources */,
+				028111F01C644B4A007DE964 /* stability ball triceps extension.mov in Resources */,
+				028111BC1C644914007DE964 /* speed skater with cone touch.mov in Resources */,
+				028111B91C644914007DE964 /* front and side step shuffle.mov in Resources */,
+				02EDB0FC1C436D6900EC0B03 /* SimpleTableCell.xib in Resources */,
+				02DBD9151C442A74001DAA83 /* Full Body Icon_Splash.jpg in Resources */,
+				028111DE1C644AD7007DE964 /* curtsy lunge.mov in Resources */,
+				028111EE1C644B4A007DE964 /* press pull biceps curls.mov in Resources */,
+				028111D51C644A86007DE964 /* stationary lunge to hammer curl press.mov in Resources */,
+				028111DF1C644AD7007DE964 /* dumbbell walking lunges.mov in Resources */,
+				02DBD90F1C4428DD001DAA83 /* Core_Icon.jpg in Resources */,
+				028111D11C644A86007DE964 /* dumbbell squat and twisting military press.mov in Resources */,
+				02DBD9121C4428DD001DAA83 /* Upper Body_Icon.jpg in Resources */,
+				028111C41C644A06007DE964 /* bench knee flutter kicks to knee crunches.mov in Resources */,
+				028111B71C644914007DE964 /* 45 degree knee highs.mov in Resources */,
+				028111E11C644AD7007DE964 /* med ball pump and jump.mov in Resources */,
 				0276BE921C40958200DCB510 /* Assets.xcassets in Resources */,
-				0276BE8D1C40958200DCB510 /* Main.storyboard in Resources */,
+				028111ED1C644B4A007DE964 /* incline bench dumbbell rows.mov in Resources */,
+				028111EC1C644B4A007DE964 /* dumbbell alternating drop chest press.mov in Resources */,
+				028111EF1C644B4A007DE964 /* rollie pollie med ball push up.mov in Resources */,
+				029590BC1C61F77900B2F304 /* intro.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +578,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02747D111C40E54A0023D9C8 /* ListOfExercises.m in Sources */,
 				0276BE901C40958200DCB510 /* chasingFITness.xcdatamodeld in Sources */,
+				02747D141C40E6320023D9C8 /* CustomCell.m in Sources */,
+				028926D01C4E22220059C2A4 /* VideoView.m in Sources */,
+				028117FD1C509E3C001E45AE /* AVPlayerClass.m in Sources */,
+				029590B21C61CD3700B2F304 /* readData.m in Sources */,
+				026B01851C48BD40005FED38 /* SelectTimerController.m in Sources */,
+				024383861C462675007BCE3F /* ListOfPractices.m in Sources */,
 				0276BE8A1C40958200DCB510 /* ViewController.m in Sources */,
+				026B017F1C48A36B005FED38 /* collectionCell.m in Sources */,
+				02EDB1071C43AEAF00EC0B03 /* myMenuView.m in Sources */,
+				029590BF1C6203B300B2F304 /* buildWorkoutViewController.m in Sources */,
 				0276BE871C40958200DCB510 /* AppDelegate.m in Sources */,
 				0276BE841C40958200DCB510 /* main.m in Sources */,
 			);
@@ -312,14 +627,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0276BE8B1C40958200DCB510 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0276BE8C1C40958200DCB510 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0276BE931C40958200DCB510 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -417,10 +724,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = chasingFITness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Patera.chasingFITness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "chasingFITness-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -428,10 +740,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = chasingFITness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Patera.chasingFITness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "chasingFITness-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -502,6 +818,7 @@
 				0276BEB11C40958200DCB510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0276BEB21C40958200DCB510 /* Build configuration list for PBXNativeTarget "chasingFITnessTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +827,7 @@
 				0276BEB41C40958200DCB510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0276BEB51C40958200DCB510 /* Build configuration list for PBXNativeTarget "chasingFITnessUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +836,7 @@
 				0276BEB71C40958200DCB510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
