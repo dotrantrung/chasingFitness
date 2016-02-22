@@ -32,8 +32,8 @@
     lowerbody =[self.dataReader fetchedNameVideo:[listBodyPart objectAtIndex:3]];
     upperbody =[self.dataReader fetchedNameVideo:[listBodyPart objectAtIndex:4]];
 
-
-
+    
+    self.choosingTableView.multipleTouchEnabled = true;
     // Do any additional setup after loading the view, typically from a nib.
     self.cellSelected = [NSMutableArray array];
     self.namePracticesSelected = [NSMutableArray array];
@@ -67,13 +67,14 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    static NSString *cellIdentifier = @"buildWorkoutCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"CustomCellBuildWorkout";
+    CustomCellBuildWorkout *cell= (CustomCellBuildWorkout *)[tableView   dequeueReusableCellWithIdentifier:cellIdentifier];
+
     if (cell == nil){
         
-        cell = [[UITableViewCell alloc]initWithStyle:
-                UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        
     }
     NSArray* a;
     switch (indexPath.section){
@@ -95,38 +96,52 @@
         default:
             break;
     };
-    cell.textLabel.text = [a objectAtIndex:indexPath.row];
-   
-    cell.textLabel.textColor = [UIColor blackColor];
-    cell.contentView.backgroundColor = [UIColor whiteColor];
+    cell.exerciseNameLabel.text = [a objectAtIndex:indexPath.row];
+    [cell loadImage:[a objectAtIndex:indexPath.row]];
+
+    cell.exerciseNameLabel.textColor = [UIColor blackColor];
     cell.backgroundColor = [UIColor whiteColor];
 
     
     if ([self.cellSelected containsObject:indexPath])
     {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        cell.textLabel.highlighted = YES;
-        cell.contentView.backgroundColor = [UIColor blackColor];
+        cell.backgroundColor = [UIColor lightGrayColor];
 
     }
     else
     {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-        cell.textLabel.highlighted = NO;
-        cell.contentView.backgroundColor = [UIColor whiteColor];
+        cell.backgroundColor = [UIColor whiteColor];
 
     }
     return cell;
 }
 
-- (IBAction)moveToSelectTimer:(id)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    SelectTimerController *selectTimerVC = (SelectTimerController *) [storyboard instantiateViewControllerWithIdentifier:@"selectTimerController"];
-    [selectTimerVC setModalPresentationStyle:UIModalPresentationPopover];
-    selectTimerVC.multiplePracticesArray = self.namePracticesSelected ;
-    selectTimerVC.multiplePractices = YES;
-     [self presentViewController:selectTimerVC animated:YES completion:NULL];
+- (IBAction)moveToTimerSelection:(id)sender {
+    if ([self.namePracticesSelected count] == 0){
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Practice more?" message:@"Choose more than 0 practice to build your workout session."
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        //We add buttons to the alert controller by creating UIAlertActions:
+        UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:nil]; //You can use a block here to handle a press on this button
+        [alertController addAction:actionOk];
+        [self presentViewController:alertController animated:YES completion:nil];
+
+    }
+    else{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SelectTimerController *selectTimerVC = (SelectTimerController *) [storyboard instantiateViewControllerWithIdentifier:@"SelectTimerController"];
+        selectTimerVC.multiplePracticesArray = self.namePracticesSelected;
+        
+        //
+        //    // Have the transition do a horizontal flip - my personal fav
+        //    [practicesView setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+        // Pass the selected object to the new view controller.
+        [self.navigationController pushViewController:selectTimerVC animated:YES];
+        
+    }
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -134,8 +149,8 @@
     //if you want only one cell to be selected use a local NSIndexPath property instead of array. and use the code below
     //self.selectedIndexPath = indexPath;
     //the below code will allow multiple selection
-    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
-    NSString *cellText = selectedCell.textLabel.text;
+    CustomCellBuildWorkout *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellText = selectedCell.exerciseNameLabel.text;
 
     if ([self.cellSelected containsObject:indexPath])
     {

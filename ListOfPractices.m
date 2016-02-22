@@ -7,8 +7,7 @@
 //
 
 #import "ListOfPractices.h"
-#import "collectionCell.h"
-#import "SelectTimerController.h"
+
 @interface ListOfPractices ()
 {
     NSArray *listVideoName;
@@ -67,6 +66,13 @@
     //    [practicesView setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:videoVC animated:YES];
+}
+- (IBAction)moveToBuildWorkout:(id)sender {
+    UIStoryboard *aStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+     buildWorkoutViewController* buildWorkoutVC = [aStoryboard instantiateViewControllerWithIdentifier:@"buildWorkoutVC"];
+    
+
+    [self.navigationController pushViewController:buildWorkoutVC animated:YES];
 }
 
 

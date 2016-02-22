@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "myMenuView.h"
 @interface SelectTimerController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UISegmentedControl *numSetSegments;
 @property (weak, nonatomic) IBOutlet myMenuView *dropDownMenu;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *timeSelectionTable;
 @property (strong, nonatomic) NSString *nameOfPractice;
-@property Boolean multiplePractices;
 @property NSArray * multiplePracticesArray;
 
 @end

@@ -24,11 +24,19 @@
     [self.view addSubview:temp];
                       
 }
-- (IBAction)moveToExcercisesDemo:(id)sender {
+- (IBAction)moveToExercisesDemo:(id)sender {
     UIStoryboard *aStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
    
     ListOfExercises* viewController = [aStoryboard instantiateViewControllerWithIdentifier:@"listOfExercises"];
 
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (IBAction)moveToBuildWorkout:(id)sender {
+    UIStoryboard *aStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    buildWorkoutViewController* viewController = [aStoryboard instantiateViewControllerWithIdentifier:@"buildWorkoutVC"];
+    
     
     [self.navigationController pushViewController:viewController animated:YES];
 }

@@ -31,22 +31,7 @@
     self.listExcersiseTable.delegate = self;
     self.listExcersiseTable.dataSource = self;
 }
-//-(void) didTapOnTableView:(UIGestureRecognizer*) recognizer {
-//    CGPoint tapLocation = [recognizer locationInView:self.listExcersiseTable];
-//    NSIndexPath *indexPath = [self.listExcersiseTable indexPathForRowAtPoint:tapLocation];
-//    
-//    if (indexPath) { //we are in a tableview cell, let the gesture be handled by the view
-//        UIStoryboard *aStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//        
-//        ListOfPractices* viewController = [aStoryboard instantiateViewControllerWithIdentifier:@"ListOfPractices"];
-//        
-//        
-//        [self.navigationController pushViewController:viewController animated:YES];
-//        recognizer.cancelsTouchesInView = NO;
-//    } else { // anywhere else, do what is needed for your case
-//        [self.navigationController popViewControllerAnimated:YES];
-//    }
-//}
+
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
     return [listNameArray count];
@@ -82,7 +67,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ListOfPractices *practicesView = (ListOfPractices *) [storyboard instantiateViewControllerWithIdentifier:@"ListOfPractices"];
     practicesView.titleLabel.text =[listNameArray objectAtIndex:indexPath.row];
-    [practicesView setModalPresentationStyle:UIModalPresentationFormSheet];
     practicesView.nameOfPractice = [NSString stringWithFormat:@"%@",[listNameArray objectAtIndex:indexPath.row] ];
 //    
 //    // Have the transition do a horizontal flip - my personal fav

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		021BC1631C79C7DF009CEC4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021BC1621C79C7DF009CEC4C /* Main.storyboard */; };
 		024383861C462675007BCE3F /* ListOfPractices.m in Sources */ = {isa = PBXBuildFile; fileRef = 024383851C462675007BCE3F /* ListOfPractices.m */; };
+		024C231B1C7B15F100B0F31D /* CustomCellBuildWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 024C231A1C7B15F100B0F31D /* CustomCellBuildWorkout.m */; };
+		024C231D1C7B161C00B0F31D /* CustomCellBuildWorkout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024C231C1C7B161C00B0F31D /* CustomCellBuildWorkout.xib */; };
 		026B017F1C48A36B005FED38 /* collectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 026B017E1C48A36B005FED38 /* collectionCell.m */; };
 		026B01851C48BD40005FED38 /* SelectTimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026B01841C48BD40005FED38 /* SelectTimerController.m */; };
 		02747D111C40E54A0023D9C8 /* ListOfExercises.m in Sources */ = {isa = PBXBuildFile; fileRef = 02747D101C40E54A0023D9C8 /* ListOfExercises.m */; };
@@ -94,6 +96,9 @@
 		021BC1621C79C7DF009CEC4C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		024383841C462675007BCE3F /* ListOfPractices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfPractices.h; path = ../ListOfPractices.h; sourceTree = "<group>"; };
 		024383851C462675007BCE3F /* ListOfPractices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfPractices.m; path = ../ListOfPractices.m; sourceTree = "<group>"; };
+		024C23191C7B15F100B0F31D /* CustomCellBuildWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBuildWorkout.h; sourceTree = "<group>"; };
+		024C231A1C7B15F100B0F31D /* CustomCellBuildWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBuildWorkout.m; sourceTree = "<group>"; };
+		024C231C1C7B161C00B0F31D /* CustomCellBuildWorkout.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellBuildWorkout.xib; sourceTree = "<group>"; };
 		026B017D1C48A36B005FED38 /* collectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionCell.h; sourceTree = "<group>"; };
 		026B017E1C48A36B005FED38 /* collectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionCell.m; sourceTree = "<group>"; };
 		026B01831C48BD40005FED38 /* SelectTimerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTimerController.h; sourceTree = "<group>"; };
@@ -211,6 +216,21 @@
 			name = MenuForAllView;
 			sourceTree = "<group>";
 		};
+		024C231E1C7B226F00B0F31D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				024C231F1C7B227B00B0F31D /* Agility */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		024C231F1C7B227B00B0F31D /* Agility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Agility;
+			sourceTree = "<group>";
+		};
 		0276BE761C40958200DCB510 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +275,9 @@
 				028117FB1C509E3C001E45AE /* AVPlayerClass.h */,
 				028117FC1C509E3C001E45AE /* AVPlayerClass.m */,
 				029590B51C61E1AD00B2F304 /* TextData.json */,
+				024C23191C7B15F100B0F31D /* CustomCellBuildWorkout.h */,
+				024C231A1C7B15F100B0F31D /* CustomCellBuildWorkout.m */,
+				024C231C1C7B161C00B0F31D /* CustomCellBuildWorkout.xib */,
 				029590C01C6203BF00B2F304 /* CustomLargeCell */,
 				024383831C46253C007BCE3F /* MenuForAllView */,
 				02EDB1041C43AACF00EC0B03 /* Large Cell */,
@@ -270,6 +293,7 @@
 		0276BE821C40958200DCB510 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				024C231E1C7B226F00B0F31D /* Images */,
 				028111F11C644B53007DE964 /* Upper Body */,
 				028111E41C644AEA007DE964 /* Lower Body */,
 				028111D71C644A8C007DE964 /* Full Body */,
@@ -521,6 +545,7 @@
 				029590B61C61E1AD00B2F304 /* TextData.json in Resources */,
 				028111C71C644A06007DE964 /* standing single arm obliques.mov in Resources */,
 				0276BE951C40958200DCB510 /* LaunchScreen.storyboard in Resources */,
+				024C231D1C7B161C00B0F31D /* CustomCellBuildWorkout.xib in Resources */,
 				028111C81C644A06007DE964 /* Superman.mov in Resources */,
 				028111D41C644A86007DE964 /* standing dumbbell wood chop.mov in Resources */,
 				028111D61C644A86007DE964 /* weighted spider-man push ups.mov in Resources */,
@@ -579,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02747D111C40E54A0023D9C8 /* ListOfExercises.m in Sources */,
+				024C231B1C7B15F100B0F31D /* CustomCellBuildWorkout.m in Sources */,
 				0276BE901C40958200DCB510 /* chasingFITness.xcdatamodeld in Sources */,
 				02747D141C40E6320023D9C8 /* CustomCell.m in Sources */,
 				028926D01C4E22220059C2A4 /* VideoView.m in Sources */,

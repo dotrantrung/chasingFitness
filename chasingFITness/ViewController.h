@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "myMenuView.h"
 #import "ListOfExercises.h"
+#import "buildWorkoutViewController.h"
 @interface ViewController : UIViewController //<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet myMenuView *menuView;
 

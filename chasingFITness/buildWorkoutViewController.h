@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "readData.h"
 #import "SelectTimerController.h"
+#import "CustomCellBuildWorkout.h"
+
 @interface buildWorkoutViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *choosingTableView;
 @property (strong, nonatomic) NSMutableArray*cellSelected;

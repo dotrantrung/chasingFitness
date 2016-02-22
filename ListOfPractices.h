@@ -10,6 +10,9 @@
 #import "myMenuView.h"
 #import "readData.h"
 #import "VideoView.h"
+#import "collectionCell.h"
+#import "SelectTimerController.h"
+#import "buildWorkoutViewController.h"
 @interface ListOfPractices : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 

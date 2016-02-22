@@ -21,17 +21,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     timeOptionArray = [[NSArray alloc] initWithObjects:@"30 secs",@"60 secs", @"90 secs", @"12 reps", @"16 reps" , @"24 reps", nil];
-    if (self.multiplePractices == YES){
+  
         self.titleLabel.text = [NSString stringWithFormat:@"Set time for %lu practices",[self.multiplePracticesArray count]];
-        for (int i=0; i < [self.multiplePracticesArray count]; i++){
+    for (int i=0; i < [self.multiplePracticesArray count]; i++){
             NSLog(@"%@\n",[self.multiplePracticesArray objectAtIndex:i]);
-        }
-    }
-    else
-    {
-        self.titleLabel.text = self.nameOfPractice;
         
     }
+   
     self.timeSelectionTable.delegate = self;
     self.timeSelectionTable.dataSource = self;
 }
@@ -67,24 +63,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    VideoView    *aaa = (VideoView*) [storyboard instantiateViewControllerWithIdentifier:@"videoViewController"];
-    //videoViewController
-    [aaa setModalPresentationStyle:UIModalPresentationFormSheet];
-    //
-    //    // Have the transition do a horizontal flip - my personal fav
-    [aaa setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    if (self.multiplePractices == NO)
-        aaa.nameOfVideo =self.nameOfPractice;
-    else{
-        aaa.multiplePractices =YES;
-        aaa.multiplePracticesArray = self.multiplePracticesArray;
-    }
-    // Pass the selected object to the new view controller.
-    [self presentViewController:aaa animated:YES completion:NULL];
-}
+//- (void)tableView:(UITableView *)tableView
+//didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    VideoView    *aaa = (VideoView*) [storyboard instantiateViewControllerWithIdentifier:@"videoViewController"];
+//    //videoViewController
+//    [aaa setModalPresentationStyle:UIModalPresentationFormSheet];
+//    //
+//    //    // Have the transition do a horizontal flip - my personal fav
+//    [aaa setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+//    
+//    aaa.multiplePractices =YES;
+//    aaa.multiplePracticesArray = self.multiplePracticesArray;
+//    
+//    // Pass the selected object to the new view controller.
+//    [self presentViewController:aaa animated:YES completion:NULL];
+//}
 
 /*
 #pragma mark - Navigation
