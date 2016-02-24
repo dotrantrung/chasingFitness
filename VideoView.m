@@ -19,6 +19,8 @@
     NSURL *videoURL = [[NSBundle mainBundle] URLForResource:self.nameOfVideo withExtension:@"mov"];
     self.player =[AVPlayer playerWithURL:videoURL];
     [self.playerView setMovieToPlayer:player];
+    [self.player setVolume:0.0];
+
     AVPlayerLayer *layer = [AVPlayerLayer layer];
     float b =self.view.frame.size.width;
 

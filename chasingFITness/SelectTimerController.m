@@ -63,22 +63,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//- (void)tableView:(UITableView *)tableView
-//didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    VideoView    *aaa = (VideoView*) [storyboard instantiateViewControllerWithIdentifier:@"videoViewController"];
-//    //videoViewController
-//    [aaa setModalPresentationStyle:UIModalPresentationFormSheet];
-//    //
-//    //    // Have the transition do a horizontal flip - my personal fav
-//    [aaa setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-//    
-//    aaa.multiplePractices =YES;
-//    aaa.multiplePracticesArray = self.multiplePracticesArray;
-//    
-//    // Pass the selected object to the new view controller.
-//    [self presentViewController:aaa animated:YES completion:NULL];
-//}
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+- (IBAction)tapMoveToMultiVideoVC:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    MultiVideoViewController    *aaa = (MultiVideoViewController*) [storyboard instantiateViewControllerWithIdentifier:@"MultiVideoViewController"];
+
+    
+    aaa.multiplePracticesArray = self.multiplePracticesArray;
+    
+    [self.navigationController pushViewController:aaa animated:YES];
+}
 
 /*
 #pragma mark - Navigation

@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="a02-DH-yly">
             <objects>
-                <navigationController id="73u-54-uXv" sceneMemberID="viewController">
+                <navigationController id="73u-54-uXv" customClass="NavigationViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B0H-LA-Oxb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="329" y="-1367"/>
         </scene>
-        <!--View Controller-->
+        <!--chasingFITness-->
         <scene sceneID="0oO-hv-uqV">
             <objects>
                 <viewController id="QPq-hR-j3b" customClass="ViewController" sceneMemberID="viewController">
@@ -142,7 +142,7 @@
                             <constraint firstItem="7cU-Oc-anx" firstAttribute="leading" secondItem="8ku-ng-mcF" secondAttribute="leading" id="tdq-i0-MSx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sWY-Qy-atn"/>
+                    <navigationItem key="navigationItem" title="chasingFITness" id="sWY-Qy-atn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyY-qy-jgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,6 +174,7 @@
                                 </state>
                                 <connections>
                                     <action selector="moveToTimerSelection:" destination="kU0-FD-xF3" eventType="touchUpInside" id="exd-Yy-Dnd"/>
+                                    <action selector="tapMoveToMultiVideoVC:" destination="bp5-qf-uE6" eventType="touchUpInside" id="2cC-1x-l6J"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LJY-wT-ick">
@@ -226,6 +227,46 @@
             </objects>
             <point key="canvasLocation" x="1001" y="-1241"/>
         </scene>
+        <!--Multi Video View Controller-->
+        <scene sceneID="Ie6-ld-6oV">
+            <objects>
+                <viewController storyboardIdentifier="MultiVideoViewController" id="FZx-Vt-eRd" customClass="MultiVideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I9w-KZ-gHR"/>
+                        <viewControllerLayoutGuide type="bottom" id="fY4-ku-vca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k3k-uD-BWC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q7b-bL-c4v">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3s-9k-m8U">
+                                <rect key="frame" x="0.0" y="115" width="600" height="485"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q7b-bL-c4v" firstAttribute="top" secondItem="k3k-uD-BWC" secondAttribute="top" id="0eR-z6-wtL"/>
+                            <constraint firstAttribute="trailing" secondItem="Q7b-bL-c4v" secondAttribute="trailing" id="9KQ-jV-vcJ"/>
+                            <constraint firstItem="j3s-9k-m8U" firstAttribute="top" secondItem="I9w-KZ-gHR" secondAttribute="bottom" constant="95" id="BaN-cc-fwU"/>
+                            <constraint firstItem="Q7b-bL-c4v" firstAttribute="trailing" secondItem="j3s-9k-m8U" secondAttribute="trailing" id="IkB-eX-er5"/>
+                            <constraint firstItem="Q7b-bL-c4v" firstAttribute="leading" secondItem="j3s-9k-m8U" secondAttribute="leading" id="Mnb-g2-MA5"/>
+                            <constraint firstItem="Q7b-bL-c4v" firstAttribute="bottom" secondItem="fY4-ku-vca" secondAttribute="top" id="VSB-3U-2bI"/>
+                            <constraint firstItem="Q7b-bL-c4v" firstAttribute="leading" secondItem="k3k-uD-BWC" secondAttribute="leading" id="VZu-MM-6Kp"/>
+                            <constraint firstItem="j3s-9k-m8U" firstAttribute="bottom" secondItem="fY4-ku-vca" secondAttribute="top" id="p8E-eh-Rxo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoContentsView" destination="j3s-9k-m8U" id="EUz-2B-y92"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjm-Dc-aNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="-597"/>
+        </scene>
         <!--Video View-->
         <scene sceneID="KaQ-JW-Uky">
             <objects>
@@ -270,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0W-jF-A4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="-26"/>
+            <point key="canvasLocation" x="1014" y="37"/>
         </scene>
         <!--List Of Exercises-->
         <scene sceneID="iYe-yn-WVC">
@@ -376,7 +417,7 @@
                                                         <constraint firstAttribute="height" constant="48" id="k83-bh-4bK"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

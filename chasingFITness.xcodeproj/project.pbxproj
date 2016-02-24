@@ -62,6 +62,10 @@
 		029590B61C61E1AD00B2F304 /* TextData.json in Resources */ = {isa = PBXBuildFile; fileRef = 029590B51C61E1AD00B2F304 /* TextData.json */; };
 		029590BC1C61F77900B2F304 /* intro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 029590BB1C61F77900B2F304 /* intro.mov */; };
 		029590BF1C6203B300B2F304 /* buildWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029590BE1C6203B300B2F304 /* buildWorkoutViewController.m */; };
+		02D99A331C7D979E00173D7C /* MultiVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D99A321C7D979E00173D7C /* MultiVideoViewController.m */; };
+		02D99A361C7D990600173D7C /* VideoCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D99A351C7D990600173D7C /* VideoCustomView.m */; };
+		02D99A381C7D991A00173D7C /* VideoCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D99A371C7D991A00173D7C /* VideoCustomView.xib */; };
+		02D99A3E1C7DAC8C00173D7C /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D99A3D1C7DAC8C00173D7C /* NavigationViewController.m */; };
 		02DBD90E1C4428DD001DAA83 /* Agility_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD9091C4428DD001DAA83 /* Agility_Icon.jpg */; };
 		02DBD90F1C4428DD001DAA83 /* Core_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD90A1C4428DD001DAA83 /* Core_Icon.jpg */; };
 		02DBD9101C4428DD001DAA83 /* Full Body Icon_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02DBD90B1C4428DD001DAA83 /* Full Body Icon_Icon.jpg */; };
@@ -167,6 +171,13 @@
 		029590BB1C61F77900B2F304 /* intro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = intro.mov; sourceTree = "<group>"; };
 		029590BD1C6203B300B2F304 /* buildWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buildWorkoutViewController.h; sourceTree = "<group>"; };
 		029590BE1C6203B300B2F304 /* buildWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buildWorkoutViewController.m; sourceTree = "<group>"; };
+		02D99A311C7D979E00173D7C /* MultiVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiVideoViewController.h; sourceTree = "<group>"; };
+		02D99A321C7D979E00173D7C /* MultiVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiVideoViewController.m; sourceTree = "<group>"; };
+		02D99A341C7D990600173D7C /* VideoCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCustomView.h; sourceTree = "<group>"; };
+		02D99A351C7D990600173D7C /* VideoCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCustomView.m; sourceTree = "<group>"; };
+		02D99A371C7D991A00173D7C /* VideoCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCustomView.xib; sourceTree = "<group>"; };
+		02D99A3C1C7DAC8C00173D7C /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationViewController.h; path = ../NavigationViewController.h; sourceTree = "<group>"; };
+		02D99A3D1C7DAC8C00173D7C /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationViewController.m; path = ../NavigationViewController.m; sourceTree = "<group>"; };
 		02DBD9091C4428DD001DAA83 /* Agility_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Agility_Icon.jpg; sourceTree = "<group>"; };
 		02DBD90A1C4428DD001DAA83 /* Core_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Core_Icon.jpg; sourceTree = "<group>"; };
 		02DBD90B1C4428DD001DAA83 /* Full Body Icon_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Full Body Icon_Icon.jpg"; sourceTree = "<group>"; };
@@ -255,6 +266,8 @@
 		0276BE811C40958200DCB510 /* chasingFITness */ = {
 			isa = PBXGroup;
 			children = (
+				02D99A3C1C7DAC8C00173D7C /* NavigationViewController.h */,
+				02D99A3D1C7DAC8C00173D7C /* NavigationViewController.m */,
 				0276BE851C40958200DCB510 /* AppDelegate.h */,
 				0276BE861C40958200DCB510 /* AppDelegate.m */,
 				0276BE881C40958200DCB510 /* ViewController.h */,
@@ -272,9 +285,14 @@
 				026B01841C48BD40005FED38 /* SelectTimerController.m */,
 				028926CE1C4E22220059C2A4 /* VideoView.h */,
 				028926CF1C4E22220059C2A4 /* VideoView.m */,
+				02D99A311C7D979E00173D7C /* MultiVideoViewController.h */,
+				02D99A321C7D979E00173D7C /* MultiVideoViewController.m */,
 				028117FB1C509E3C001E45AE /* AVPlayerClass.h */,
 				028117FC1C509E3C001E45AE /* AVPlayerClass.m */,
 				029590B51C61E1AD00B2F304 /* TextData.json */,
+				02D99A341C7D990600173D7C /* VideoCustomView.h */,
+				02D99A351C7D990600173D7C /* VideoCustomView.m */,
+				02D99A371C7D991A00173D7C /* VideoCustomView.xib */,
 				024C23191C7B15F100B0F31D /* CustomCellBuildWorkout.h */,
 				024C231A1C7B15F100B0F31D /* CustomCellBuildWorkout.m */,
 				024C231C1C7B161C00B0F31D /* CustomCellBuildWorkout.xib */,
@@ -569,6 +587,7 @@
 				028111D51C644A86007DE964 /* stationary lunge to hammer curl press.mov in Resources */,
 				028111DF1C644AD7007DE964 /* dumbbell walking lunges.mov in Resources */,
 				02DBD90F1C4428DD001DAA83 /* Core_Icon.jpg in Resources */,
+				02D99A381C7D991A00173D7C /* VideoCustomView.xib in Resources */,
 				028111D11C644A86007DE964 /* dumbbell squat and twisting military press.mov in Resources */,
 				02DBD9121C4428DD001DAA83 /* Upper Body_Icon.jpg in Resources */,
 				028111C41C644A06007DE964 /* bench knee flutter kicks to knee crunches.mov in Resources */,
@@ -608,7 +627,10 @@
 				0276BE901C40958200DCB510 /* chasingFITness.xcdatamodeld in Sources */,
 				02747D141C40E6320023D9C8 /* CustomCell.m in Sources */,
 				028926D01C4E22220059C2A4 /* VideoView.m in Sources */,
+				02D99A331C7D979E00173D7C /* MultiVideoViewController.m in Sources */,
+				02D99A361C7D990600173D7C /* VideoCustomView.m in Sources */,
 				028117FD1C509E3C001E45AE /* AVPlayerClass.m in Sources */,
+				02D99A3E1C7DAC8C00173D7C /* NavigationViewController.m in Sources */,
 				029590B21C61CD3700B2F304 /* readData.m in Sources */,
 				026B01851C48BD40005FED38 /* SelectTimerController.m in Sources */,
 				024383861C462675007BCE3F /* ListOfPractices.m in Sources */,

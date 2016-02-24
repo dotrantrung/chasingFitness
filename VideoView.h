@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
 @property (strong, nonatomic) readData *dataReader;
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
+
 
 @property (strong, nonatomic) NSString *nameOfVideo;
 @property Boolean multiplePractices;
