@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="myMenuView">
+            <connections>
+                <outlet property="dropDownTable" destination="mjN-Op-Fka" id="EVn-mp-Ef6"/>
+                <outlet property="menuButton" destination="WUK-E9-FrQ" id="y4t-7q-95F"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5q1-P9-GT3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUK-E9-FrQ">
+                    <rect key="frame" x="8" y="8" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="5FV-2v-xpV"/>
+                        <constraint firstAttribute="height" constant="35" id="GuP-aQ-z2c"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="menuButtonImage.png"/>
+                    <connections>
+                        <action selector="tapDropDown:" destination="-1" eventType="touchUpInside" id="RAh-3s-tmx"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mjN-Op-Fka">
+                    <rect key="frame" x="0.0" y="44" width="330" height="189"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mjN-Op-Fka" secondAttribute="bottom" id="Q6l-E7-JPM"/>
+                <constraint firstItem="mjN-Op-Fka" firstAttribute="top" secondItem="WUK-E9-FrQ" secondAttribute="bottom" constant="1" id="X6u-qf-y9K"/>
+                <constraint firstAttribute="trailing" secondItem="mjN-Op-Fka" secondAttribute="trailing" id="aV6-lA-4H1"/>
+                <constraint firstItem="WUK-E9-FrQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="oSS-Bi-qPu"/>
+                <constraint firstItem="WUK-E9-FrQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="qX8-c5-uy2"/>
+                <constraint firstItem="mjN-Op-Fka" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wje-UR-ksb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="144" y="113.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menuButtonImage.png" width="612" height="578"/>
+    </resources>
+</document>

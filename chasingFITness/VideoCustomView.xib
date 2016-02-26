@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VideoCustomView">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkR-mP-ku3">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="207"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="383-MH-0sN">
+                    <rect key="frame" x="8" y="208" width="334" height="53"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="gfZ-rj-Fwf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.18450337629898961" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSq-eJ-jSR">
+                    <rect key="frame" x="8" y="261" width="334" height="139"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="139" id="UqS-Jm-f4E"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.96640922372872129" green="0.96395080288844914" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.18450337629999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hkR-mP-ku3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Sq-d5-TCD"/>
+                <constraint firstAttribute="trailing" secondItem="hkR-mP-ku3" secondAttribute="trailing" id="7Nz-Z1-N4f"/>
+                <constraint firstItem="383-MH-0sN" firstAttribute="trailing" secondItem="KSq-eJ-jSR" secondAttribute="trailing" id="DXe-86-a0I"/>
+                <constraint firstItem="KSq-eJ-jSR" firstAttribute="top" secondItem="383-MH-0sN" secondAttribute="bottom" id="Lwe-7x-5Sx"/>
+                <constraint firstItem="383-MH-0sN" firstAttribute="top" secondItem="hkR-mP-ku3" secondAttribute="bottom" constant="1" id="SPo-S8-Mhc"/>
+                <constraint firstItem="383-MH-0sN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="Xgi-m1-nWR"/>
+                <constraint firstItem="KSq-eJ-jSR" firstAttribute="leading" secondItem="383-MH-0sN" secondAttribute="leading" id="a4O-E5-8i3"/>
+                <constraint firstItem="hkR-mP-ku3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fWV-LC-w0A"/>
+                <constraint firstAttribute="bottom" secondItem="KSq-eJ-jSR" secondAttribute="bottom" id="toM-Me-fkT"/>
+                <constraint firstItem="hkR-mP-ku3" firstAttribute="centerX" secondItem="383-MH-0sN" secondAttribute="centerX" id="vAg-Ru-Daj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="instructionLabel" destination="KSq-eJ-jSR" id="B5q-iB-5g6"/>
+                <outlet property="titleLabel" destination="383-MH-0sN" id="D1e-jm-NR3"/>
+                <outlet property="videoView" destination="hkR-mP-ku3" id="o2L-JM-Tf4"/>
+                <outlet property="view" destination="-1" id="K2g-az-HOo"/>
+            </connections>
+        </view>
+    </objects>
+</document>

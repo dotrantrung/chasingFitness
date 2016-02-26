@@ -7,7 +7,6 @@
 //
 
 #import "VideoCustomView.h"
-
 @implementation VideoCustomView
 @synthesize titleLabel = _titleLabel;
 @synthesize videoView = _videoView;
@@ -29,7 +28,6 @@
 }
 - (void)loadView:(NSString*) exerciseName{
     NSURL *videoURL = [[NSBundle mainBundle] URLForResource:exerciseName withExtension:@"mov"];
-    NSLog(@"Gohere");
     self.player =[AVPlayer playerWithURL:videoURL];
     [self.playerView setMovieToPlayer:self.player];
     [self.player setVolume:0.0];

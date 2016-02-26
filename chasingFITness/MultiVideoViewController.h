@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "VideoCustomView.h"
+#import "VideoView.h"
 @interface MultiVideoViewController : UIViewController<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *videoContentsView;
 @property NSArray * multiplePracticesArray;
+@property (weak, nonatomic) NSMutableArray* playerList;
+@property (weak, nonatomic) NSMutableArray* playerViewList;
 
 
 @end
