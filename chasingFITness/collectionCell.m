@@ -20,10 +20,15 @@
 {    [label setText:name];
     label.adjustsFontSizeToFitWidth = YES;
     label.numberOfLines = 0;
+    label.textColor = [UIColor whiteColor]; 
     UIImage *thumnail =[self generateThumbImage:name];
    [image setImage:thumnail];
+    hiddenView.hidden = true;
     
     
+}
+-(void) hiddenView{
+    hiddenView.hidden = false;
 }
 -(UIImage *)generateThumbImage : (NSString *)filepath
 {

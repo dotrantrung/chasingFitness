@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    timeOptionArray = [[NSArray alloc] initWithObjects:@"30 secs",@"60 secs", @"90 secs", @"12 reps", @"16 reps" , @"24 reps", nil];
+    timeOptionArray = [[NSArray alloc] initWithObjects:@"30 secs",@"45 secs", @"60 secs", @"75 secs", @"90 secs" , @"120 secs", nil];
   
         self.titleLabel.text = [NSString stringWithFormat:@"Set time for %lu practices",[self.multiplePracticesArray count]];
     for (int i=0; i < [self.multiplePracticesArray count]; i++){

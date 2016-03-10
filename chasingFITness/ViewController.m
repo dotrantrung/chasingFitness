@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SWRevealViewController.h"
 @interface ViewController ()
 
 @end
@@ -19,7 +19,13 @@
     // Do any additional setup after loading the view, typically from a nib.
    //[self createMenuBar];
     self.navigationController.navigationBar.translucent = NO;
-
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sideBarButton setTarget: self.revealViewController];
+        [self.sideBarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
     [self setUpMovie];
     }
 - (void) createMenuBar{

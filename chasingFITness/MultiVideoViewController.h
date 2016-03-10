@@ -12,8 +12,10 @@
 @interface MultiVideoViewController : UIViewController<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *videoContentsView;
 @property NSArray * multiplePracticesArray;
-@property (weak, nonatomic) NSMutableArray* playerList;
-@property (weak, nonatomic) NSMutableArray* playerViewList;
-
-
+//@property  (weak,nonatomic)NSMutableArray* playerList;
+//@property  (weak,nonatomic)NSMutableArray* playerViewList;
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property int timer;
+@property NSTimer * timerObject;
+-(void) runTimer;
 @end

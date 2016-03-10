@@ -11,8 +11,10 @@
 {
     IBOutlet UIImageView *image;
     IBOutlet UILabel *label;
+    IBOutlet UIView *hiddenView;
 }
 -(void) loadCell: (NSString*)name;
              //and: (NSString*) imagePath;
+-(void) hiddenView;
 
 @end

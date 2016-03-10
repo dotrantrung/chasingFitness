@@ -13,22 +13,34 @@
 @end
 
 @implementation MultiVideoViewController
-
+- (void) runTimer{
+    self.timer --;
+    self.timerLabel.text = [NSString stringWithFormat:@"%d",self.timer];
+    if (self.timer == 0)
+        [self.timerObject invalidate];
+    NSLog(@"haha");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.playerList = [[NSMutableArray alloc]init ];
-    self.playerViewList = [[NSMutableArray alloc]init ];
+//    self.playerList = [[NSMutableArray alloc]init ];
+//    self.playerViewList = [[NSMutableArray alloc]init ];
+//
+    self.timer = 100;
+    self.timerLabel.text = [NSString stringWithFormat:@"%d",self.timer];
 
-   // [self loadView:[self.multiplePracticesArray objectAtIndex:1] withIndex:1];
-
+    self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                    target:self
+                                                selector:@selector(runTimer)
+                                                               userInfo:nil
+                                                                repeats:YES];
      [self createAllViewScrollView];
 }
 - (void)loadView:(NSString*) exerciseName withIndex:(int) index{
     AVPlayer *player;
     AVPlayerClass *playerView;
-    [self.playerList addObject:player];
-    [self.playerViewList addObject:playerView];
+//    [self.playerList addObject:player];
+//    [self.playerViewList addObject:playerView];
     
     NSURL *videoURL = [[NSBundle mainBundle] URLForResource:exerciseName withExtension:@"mov"];
     player =[AVPlayer playerWithURL:videoURL];
@@ -53,15 +65,6 @@
     [self.videoContentsView.layer addSublayer: layer];
     
     [player play];
-    UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    //[playButton addTarget:self action:@selector(tapPlay:)
-      //   forControlEvents:UIControlEventTouchUpInside];
-    float a =self.view.frame.size.width;
-    NSLog(@"%f", a);
-    playButton.frame = CGRectMake((a/2)+(a * index)-25,100, 50 , 50);
-    
-    [playButton setBackgroundImage:[UIImage imageNamed:@"playButton.png"] forState:UIControlStateNormal];
-    [self.videoContentsView addSubview:playButton];
     
     
     //Exercise Name Label

@@ -52,19 +52,32 @@
     collectionCell *cell = (collectionCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
     [cell loadCell:listVideoName[indexPath.row]];
     cell.selected = NO;
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"purchased"]){
+        if (indexPath.row!=0){
+            [cell hiddenView];
+        }
+    }
     return cell;
 }
 -(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    int labelNumber = indexPath.row %10;
+    //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"logged_in"];
+
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"purchased"]) {
+        if (labelNumber == 0){
+            [self moveToVideo:labelNumber];
+        }
+    }
+    else {
+        [self moveToVideo:labelNumber];
+    }
+}
+- (void) moveToVideo:(int) labelNumber{
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     VideoView *videoVC = (VideoView *) [storyboard instantiateViewControllerWithIdentifier:@"VideoView"];
-    int labelNumber = indexPath.row %10;
-
     videoVC.titleLabel.text =[listVideoName objectAtIndex:labelNumber];
     videoVC.nameOfVideo = [NSString stringWithFormat:@"%@",[listVideoName objectAtIndex:labelNumber] ];
-    //
-    //    // Have the transition do a horizontal flip - my personal fav
-    //    [practicesView setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:videoVC animated:YES];
 }
 - (IBAction)moveToBuildWorkout:(id)sender {

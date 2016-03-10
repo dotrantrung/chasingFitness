@@ -12,13 +12,13 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRh-gd-tZO">
-                    <rect key="frame" x="0.0" y="0.0" width="113" height="80"/>
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="113" id="aFQ-tn-g2x"/>
+                        <constraint firstAttribute="width" constant="140" id="aFQ-tn-g2x"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIF-jF-Qmf">
-                    <rect key="frame" x="114" y="0.0" width="236" height="80"/>
+                    <rect key="frame" x="148" y="0.0" width="202" height="80"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -26,7 +26,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="lIF-jF-Qmf" firstAttribute="leading" secondItem="KRh-gd-tZO" secondAttribute="trailing" constant="1" id="LIA-v0-Qdr"/>
+                <constraint firstItem="lIF-jF-Qmf" firstAttribute="leading" secondItem="KRh-gd-tZO" secondAttribute="trailing" constant="8" id="LIA-v0-Qdr"/>
                 <constraint firstItem="KRh-gd-tZO" firstAttribute="leading" secondItem="Hn2-BR-HRw" secondAttribute="leading" id="TtV-tM-t1s"/>
                 <constraint firstAttribute="bottom" secondItem="KRh-gd-tZO" secondAttribute="bottom" id="Tzm-ng-Npc"/>
                 <constraint firstAttribute="trailing" secondItem="lIF-jF-Qmf" secondAttribute="trailing" id="fyg-db-Mkm"/>

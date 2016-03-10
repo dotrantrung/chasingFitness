@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		021BC1631C79C7DF009CEC4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021BC1621C79C7DF009CEC4C /* Main.storyboard */; };
+		023F118B1C915D5000DB0CE9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F118A1C915D5000DB0CE9 /* SWRevealViewController.m */; };
+		023F118E1C9162F700DB0CE9 /* slideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023F118D1C9162F700DB0CE9 /* slideMenuViewController.m */; };
 		024383861C462675007BCE3F /* ListOfPractices.m in Sources */ = {isa = PBXBuildFile; fileRef = 024383851C462675007BCE3F /* ListOfPractices.m */; };
 		024C231B1C7B15F100B0F31D /* CustomCellBuildWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 024C231A1C7B15F100B0F31D /* CustomCellBuildWorkout.m */; };
 		024C231D1C7B161C00B0F31D /* CustomCellBuildWorkout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024C231C1C7B161C00B0F31D /* CustomCellBuildWorkout.xib */; };
@@ -98,6 +100,10 @@
 
 /* Begin PBXFileReference section */
 		021BC1621C79C7DF009CEC4C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		023F11891C915D5000DB0CE9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		023F118A1C915D5000DB0CE9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		023F118C1C9162F700DB0CE9 /* slideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slideMenuViewController.h; sourceTree = "<group>"; };
+		023F118D1C9162F700DB0CE9 /* slideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slideMenuViewController.m; sourceTree = "<group>"; };
 		024383841C462675007BCE3F /* ListOfPractices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListOfPractices.h; path = ../ListOfPractices.h; sourceTree = "<group>"; };
 		024383851C462675007BCE3F /* ListOfPractices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListOfPractices.m; path = ../ListOfPractices.m; sourceTree = "<group>"; };
 		024C23191C7B15F100B0F31D /* CustomCellBuildWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBuildWorkout.h; sourceTree = "<group>"; };
@@ -266,6 +272,8 @@
 		0276BE811C40958200DCB510 /* chasingFITness */ = {
 			isa = PBXGroup;
 			children = (
+				023F11891C915D5000DB0CE9 /* SWRevealViewController.h */,
+				023F118A1C915D5000DB0CE9 /* SWRevealViewController.m */,
 				02D99A3C1C7DAC8C00173D7C /* NavigationViewController.h */,
 				02D99A3D1C7DAC8C00173D7C /* NavigationViewController.m */,
 				0276BE851C40958200DCB510 /* AppDelegate.h */,
@@ -296,6 +304,8 @@
 				024C23191C7B15F100B0F31D /* CustomCellBuildWorkout.h */,
 				024C231A1C7B15F100B0F31D /* CustomCellBuildWorkout.m */,
 				024C231C1C7B161C00B0F31D /* CustomCellBuildWorkout.xib */,
+				023F118C1C9162F700DB0CE9 /* slideMenuViewController.h */,
+				023F118D1C9162F700DB0CE9 /* slideMenuViewController.m */,
 				029590C01C6203BF00B2F304 /* CustomLargeCell */,
 				024383831C46253C007BCE3F /* MenuForAllView */,
 				02EDB1041C43AACF00EC0B03 /* Large Cell */,
@@ -623,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02747D111C40E54A0023D9C8 /* ListOfExercises.m in Sources */,
+				023F118B1C915D5000DB0CE9 /* SWRevealViewController.m in Sources */,
 				024C231B1C7B15F100B0F31D /* CustomCellBuildWorkout.m in Sources */,
 				0276BE901C40958200DCB510 /* chasingFITness.xcdatamodeld in Sources */,
 				02747D141C40E6320023D9C8 /* CustomCell.m in Sources */,
@@ -630,6 +641,7 @@
 				02D99A331C7D979E00173D7C /* MultiVideoViewController.m in Sources */,
 				02D99A361C7D990600173D7C /* VideoCustomView.m in Sources */,
 				028117FD1C509E3C001E45AE /* AVPlayerClass.m in Sources */,
+				023F118E1C9162F700DB0CE9 /* slideMenuViewController.m in Sources */,
 				02D99A3E1C7DAC8C00173D7C /* NavigationViewController.m in Sources */,
 				029590B21C61CD3700B2F304 /* readData.m in Sources */,
 				026B01851C48BD40005FED38 /* SelectTimerController.m in Sources */,

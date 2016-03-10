@@ -13,6 +13,7 @@
 @interface ViewController : UIViewController //<UITableViewDataSource, UITableViewDelegate>
 //@property (weak, nonatomic) IBOutlet myMenuView *menuView;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 @property (weak, nonatomic) IBOutlet UIView *videoView;
 
 @end
