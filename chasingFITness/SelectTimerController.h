@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *timeSelectionTable;
 @property (strong, nonatomic) NSString *nameOfPractice;
 @property NSArray * multiplePracticesArray;
+@property int selectedTime;
+@property int numSet;
 
 @end

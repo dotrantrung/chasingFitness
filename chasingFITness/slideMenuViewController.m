@@ -34,6 +34,7 @@
     NSString* cellIdentifier = @"menuCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.textLabel.text = [menu objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor redColor];
     return cell;
 }
 @end

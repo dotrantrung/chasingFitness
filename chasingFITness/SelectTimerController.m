@@ -20,14 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    timeOptionArray = [[NSArray alloc] initWithObjects:@"30 secs",@"45 secs", @"60 secs", @"75 secs", @"90 secs" , @"120 secs", nil];
-  
+   // timeOptionArray = [[NSArray alloc] initWithObjects:30 ,45, 60,75, 90,120, nil];
+    timeOptionArray = @[@30, @45, @60, @75, @90, @120];
+
         self.titleLabel.text = [NSString stringWithFormat:@"Set time for %lu practices",[self.multiplePracticesArray count]];
     for (int i=0; i < [self.multiplePracticesArray count]; i++){
             NSLog(@"%@\n",[self.multiplePracticesArray objectAtIndex:i]);
         
     }
-   
+    self.numSet = 4;
+    self.selectedTime = 30;
     self.timeSelectionTable.delegate = self;
     self.timeSelectionTable.dataSource = self;
 }
@@ -45,13 +47,16 @@
     }
     cell.textAlignment= UITextAlignmentCenter;
     
-    cell.textLabel.text = [timeOptionArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ seconds", [timeOptionArray objectAtIndex:indexPath.row]];
     if (indexPath.row < 3)
         cell.textLabel.textColor = [UIColor redColor];
     else
         cell.textLabel.textColor = [UIColor blackColor];
+    if (indexPath.row == 0){
+        [self.timeSelectionTable selectRowAtIndexPath:indexPath animated:YES  scrollPosition:UITableViewScrollPositionBottom];
+        [self.timeSelectionTable cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    }
 
-  
     cell.contentView.backgroundColor = [UIColor whiteColor];
     cell.backgroundColor = [UIColor whiteColor];
     
@@ -63,20 +68,44 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+    NSNumber *cellText = [timeOptionArray objectAtIndex:indexPath.row];
+    self.selectedTime = [cellText intValue];
+    NSLog(@"%d", self.selectedTime);
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
 }
 - (IBAction)tapMoveToMultiVideoVC:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    MultiVideoViewController    *aaa = (MultiVideoViewController*) [storyboard instantiateViewControllerWithIdentifier:@"MultiVideoViewController"];
-
+    MultiVideoViewController    *multiVideoVC = (MultiVideoViewController*) [storyboard instantiateViewControllerWithIdentifier:@"MultiVideoViewController"];
+  //3  self.timeSelectionTable.
+    multiVideoVC.setTime = self.selectedTime;
+    multiVideoVC.numberOfSet = self.numSet;
+    multiVideoVC.multiplePracticesArray = self.multiplePracticesArray;
     
-    aaa.multiplePracticesArray = self.multiplePracticesArray;
-    
-    [self.navigationController pushViewController:aaa animated:YES];
+    [self.navigationController pushViewController:multiVideoVC animated:YES];
 }
-
+- (IBAction)setSegmentValueChanged:(UISegmentedControl *)sender {
+    switch ([sender selectedSegmentIndex]) {
+        case 0:
+            self.numSet = 4;
+            break;
+        case 1:
+            self.numSet = 5;
+            break;
+        case 2:
+            self.numSet = 6;
+            break;
+        default:
+            self.numSet = 4;
+            break;
+    }
+}
 /*
 #pragma mark - Navigation
 

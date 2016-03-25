@@ -13,28 +13,59 @@
 @end
 
 @implementation MultiVideoViewController
-- (void) runTimer{
-    self.timer --;
-    self.timerLabel.text = [NSString stringWithFormat:@"%d",self.timer];
-    if (self.timer == 0)
-        [self.timerObject invalidate];
-    NSLog(@"haha");
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.playerList = [[NSMutableArray alloc]init ];
 //    self.playerViewList = [[NSMutableArray alloc]init ];
 //
-    self.timer = 100;
-    self.timerLabel.text = [NSString stringWithFormat:@"%d",self.timer];
+    self.clockTimer.hidden = true;
+    self.timerLabel.numberOfLines=0;
+    self.timerLabel.lineBreakMode = UILineBreakModeCharacterWrap;
+    [self createAllViewScrollView];
+}
+- (IBAction)tapStartTimer:(id)sender {
+    [self initializeTimer];
+    self.startButton.hidden = true;
+}
+- (void) initializeTimer{
+    self.breakTime = 15;
+    self.timer = self.setTime;
+    self.tempNumOfSet = 1;
+    self.clockTimer.hidden = false;
+    self.timerLabel.text = [NSString stringWithFormat:@"Set %d / %d",self.tempNumOfSet,self.numberOfSet];
+    self.clockTimer.text = [NSString stringWithFormat:@"%d",self.timer];
+    self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setTimer) userInfo:nil repeats:YES];
+}
+- (void) setTimer{
+    self.timer --;
+    
+    self.timerLabel.text = [NSString stringWithFormat:@"Set %d / %d",self.tempNumOfSet,self.numberOfSet];
+    self.clockTimer.text = [NSString stringWithFormat:@"%d",self.timer];
+    if (self.tempNumOfSet > self.numberOfSet){
+        self.startButton.hidden = false;
+        self.clockTimer.hidden = true;
+        return;
+    }
+    if (self.timer == 0){
+        [self.timerObject invalidate];
+        self.timer = self.breakTime;
+        NSLog(@"%d",self.breakTime);
+        self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(breakTimer) userInfo:nil repeats:YES];
+    }
+}
+- (void) breakTimer{
+    self.timer --;
+    self.timerLabel.text = [NSString stringWithFormat:@"BREAK \n [%d set(s) left]",(self.numberOfSet - self.tempNumOfSet)];
+    self.clockTimer.text = [NSString stringWithFormat:@"%d",self.timer];
 
-    self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                    target:self
-                                                selector:@selector(runTimer)
-                                                               userInfo:nil
-                                                                repeats:YES];
-     [self createAllViewScrollView];
+    if (self.timer == 0){
+        self.tempNumOfSet++;
+        [self.timerObject invalidate];
+        self.timer = self.setTime;
+        self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setTimer) userInfo:nil repeats:YES];
+    }
 }
 - (void)loadView:(NSString*) exerciseName withIndex:(int) index{
     AVPlayer *player;
@@ -57,7 +88,7 @@
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
                                                object:[player currentItem]];
     [layer setPlayer:player];
-    [layer setFrame:CGRectMake((index * self.view.frame.size.width),0,b, 300)];
+    [layer setFrame:CGRectMake((index * b),0,b, self.view.frame.size.height/3)];
     [layer setBackgroundColor:[UIColor redColor].CGColor];
     [layer setOpacity:0.75];
     [layer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
@@ -68,6 +99,24 @@
     
     
     //Exercise Name Label
+    UILabel  * nameLabel = [[UILabel alloc] initWithFrame:CGRectMake((index * b),self.view.frame.size.height/3,b, 50)];
+    nameLabel.numberOfLines=0;
+    nameLabel.lineBreakMode=UILineBreakModeCharacterWrap;
+    nameLabel.text = exerciseName;
+    nameLabel.backgroundColor = [UIColor blackColor];
+    nameLabel.textColor = [UIColor redColor];
+    [self.videoContentsView addSubview: nameLabel];
+
+    UILabel  * instructionLabel = [[UILabel alloc] initWithFrame:CGRectMake((index * b),self.view.frame.size.height/3+50,b, 100)];
+    instructionLabel.numberOfLines=0;
+    instructionLabel.lineBreakMode=UILineBreakModeCharacterWrap;
+    instructionLabel.backgroundColor = [UIColor blackColor];
+    instructionLabel.textColor = [UIColor whiteColor];
+    readData * dataReader = [[readData alloc] init];
+    instructionLabel.text =[dataReader fetchedInstruction:exerciseName];
+    [self.videoContentsView addSubview: instructionLabel];
+
+    
     
 }
 - (void)playerItemDidReachEnd:(NSNotification *)notification {

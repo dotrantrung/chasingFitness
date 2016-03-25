@@ -11,10 +11,16 @@
 #import "VideoView.h"
 @interface MultiVideoViewController : UIViewController<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *videoContentsView;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property NSArray * multiplePracticesArray;
 //@property  (weak,nonatomic)NSMutableArray* playerList;
 //@property  (weak,nonatomic)NSMutableArray* playerViewList;
+@property int breakTime;
+@property int setTime;
+@property int numberOfSet;
+@property int tempNumOfSet;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *clockTimer;
 @property int timer;
 @property NSTimer * timerObject;
 -(void) runTimer;
