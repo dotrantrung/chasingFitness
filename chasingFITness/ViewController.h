@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "myMenuView.h"
 #import "ListOfExercises.h"
 #import "buildWorkoutViewController.h"
 @interface ViewController : UIViewController //<UITableViewDataSource, UITableViewDelegate>
@@ -15,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 @property (weak, nonatomic) IBOutlet UIView *videoView;
+@property (weak, nonatomic) IBOutlet UIButton *purchaseButton;
 
 @end
 

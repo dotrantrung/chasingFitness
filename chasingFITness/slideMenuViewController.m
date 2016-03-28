@@ -7,7 +7,7 @@
 //
 
 #import "slideMenuViewController.h"
-
+#import "SWRevealViewController.h"
 @implementation slideMenuViewController{
     NSArray *menu;
 }
@@ -20,9 +20,9 @@
 }
 -(void) viewDidLoad{
     [super viewDidLoad];
-    menu = @[@"List of Exercises",@"Saved Routines", @"Contacts"];
+    menu = @[@"Home",@"List of Exercises",@"Saved Routines", @"Contacts"];
     self.tableView.delegate = self;
-    self.tableView.dataSource =self;
+    self.tableView.dataSource = self;
 }
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -31,10 +31,13 @@
     return [menu count];
 }
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString* cellIdentifier = @"menuCell";
+    NSString* cellIdentifier = [menu objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.textLabel.text = [menu objectAtIndex:indexPath.row];
     cell.textLabel.textColor = [UIColor redColor];
     return cell;
+}
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
 }
 @end

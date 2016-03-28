@@ -20,8 +20,9 @@
 {    [label setText:name];
     label.adjustsFontSizeToFitWidth = YES;
     label.numberOfLines = 0;
-    label.textColor = [UIColor whiteColor]; 
-    UIImage *thumnail =[self generateThumbImage:name];
+    label.textColor = [UIColor whiteColor];
+    NSString *nameImage = [NSString stringWithFormat:@"%@.jpg",name];
+    UIImage *thumnail =[UIImage imageNamed:nameImage];
    [image setImage:thumnail];
     hiddenView.hidden = true;
     
@@ -30,19 +31,5 @@
 -(void) hiddenView{
     hiddenView.hidden = false;
 }
--(UIImage *)generateThumbImage : (NSString *)filepath
-{
-    NSURL *url = [[NSBundle mainBundle] URLForResource:filepath withExtension:@"mov"];
-   // NSURL *url = [NSURL fileURLWithPath:filepath];
-    
-    AVAsset *asset = [AVAsset assetWithURL:url];
-    AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:asset];
-    CMTime time = [asset duration];
-    time.value = 50;
-    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
-    UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);  // CGImageRef won't be released by ARC
-    
-    return thumbnail;
-}
+
 @end

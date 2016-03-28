@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "myMenuView.h"
 #import "MultiVideoViewController.h"
 @interface SelectTimerController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *numSetSegments;
-@property (weak, nonatomic) IBOutlet myMenuView *dropDownMenu;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *timeSelectionTable;
 @property (strong, nonatomic) NSString *nameOfPractice;

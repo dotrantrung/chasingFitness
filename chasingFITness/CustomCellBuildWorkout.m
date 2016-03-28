@@ -17,24 +17,25 @@
     
 }
 -(void) loadImage:(NSString*) name{
-    UIImage *thumnail =[self generateThumbImage:name];
+    NSString *nameImage = [NSString stringWithFormat:@"%@.jpg",name];
+    UIImage *thumnail =[UIImage imageNamed:nameImage];
     [self.exerciseImage setImage:thumnail];
 }
 
--(UIImage *)generateThumbImage : (NSString *)filepath
-{
-    NSURL *url = [[NSBundle mainBundle] URLForResource:filepath withExtension:@"mov"];
-    // NSURL *url = [NSURL fileURLWithPath:filepath];
-    
-    AVAsset *asset = [AVAsset assetWithURL:url];
-    AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:asset];
-    CMTime time = [asset duration];
-    time.value = 50;
-    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
-    UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);  // CGImageRef won't be released by ARC
-    
-    return thumbnail;
-}
+//-(UIImage *)generateThumbImage : (NSString *)filepath
+//{
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:filepath withExtension:@"mov"];
+//    // NSURL *url = [NSURL fileURLWithPath:filepath];
+//    
+//    AVAsset *asset = [AVAsset assetWithURL:url];
+//    AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:asset];
+//    CMTime time = [asset duration];
+//    time.value = 50;
+//    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
+//    UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
+//    CGImageRelease(imageRef);  // CGImageRef won't be released by ARC
+//    
+//    return thumbnail;
+//}
 
 @end

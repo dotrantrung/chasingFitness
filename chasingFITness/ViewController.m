@@ -27,7 +27,28 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     [self setUpMovie];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"purchased"])
+    {
+        [self.purchaseButton setTitle:@"FULL ACCESS purchased" forState:UIControlStateNormal];
     }
+    else {
+        [self.purchaseButton setTitle:@"Purchase FULL ACCESS" forState:UIControlStateNormal];
+    }
+}
+- (IBAction)tapPurchase:(id)sender {
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"purchased"]){
+        
+        [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"purchased"];
+        [self.purchaseButton setTitle:@"FULL ACCESS purchased" forState:UIControlStateNormal];
+
+    }
+    else{
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"purchased"];
+        [self.purchaseButton setTitle:@"Purchase FULL ACCESS" forState:UIControlStateNormal];
+
+    }
+    
+}
 - (void) createMenuBar{
     UIView *temp = [[myMenuView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-100, self.view.frame.size.height/3)];
     [self.view addSubview:temp];
@@ -52,14 +73,13 @@
 - (void) setUpMovie{
     AVPlayer *player1;
     AVPlayerClass *playerView1;
-    NSURL *videoURL = [[NSBundle mainBundle] URLForResource:@"dumbbell walking lunges" withExtension:@"mov"];
+    NSURL *videoURL = [[NSBundle mainBundle] URLForResource:@"Dumbbell walking lunges" withExtension:@"mov"];
     player1 =[AVPlayer playerWithURL:videoURL];
     [playerView1 setMovieToPlayer:player1];
     [player1 setMuted: true];
     
     AVPlayerLayer *layer = [AVPlayerLayer layer];
     float b =self.view.bounds.size.width;
-    [layer setOpacity:0.8];
     [layer setSpeed:0.3];
     [layer setPlayer:player1];
     [layer setFrame:CGRectMake(0,0,b, self.videoView.frame.size.height/1.5)];
@@ -76,13 +96,12 @@
     [player1 play];
     AVPlayer *player2;
     AVPlayerClass *playerView2;
-    NSURL *videoURL2 = [[NSBundle mainBundle] URLForResource:@"bench knee flutter kicks to knee crunches" withExtension:@"mov"];
+    NSURL *videoURL2 = [[NSBundle mainBundle] URLForResource:@"Bench knee flutter kicks to knee crunches" withExtension:@"mov"];
     player2 =[AVPlayer playerWithURL:videoURL2];
     [playerView2 setMovieToPlayer:player2];
     [player2 setMuted: true];
     
     AVPlayerLayer *layer2 = [AVPlayerLayer layer];
-    [layer2 setOpacity:0.8];
     [layer2 setSpeed:0.95];
     [layer2 setPlayer:player2];
     [layer2 setFrame:CGRectMake(0,self.videoView.frame.size.height/2,b, self.videoView.frame.size.height/1.5)];
