@@ -49,11 +49,7 @@
     }
     
 }
-- (void) createMenuBar{
-    UIView *temp = [[myMenuView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-100, self.view.frame.size.height/3)];
-    [self.view addSubview:temp];
-                      
-}
+
 - (IBAction)moveToExercisesDemo:(id)sender {
     UIStoryboard *aStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
    
