@@ -25,6 +25,8 @@
 		0276BE951C40958200DCB510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0276BE931C40958200DCB510 /* LaunchScreen.storyboard */; };
 		0276BEA01C40958200DCB510 /* chasingFITnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276BE9F1C40958200DCB510 /* chasingFITnessTests.m */; };
 		0276BEAB1C40958200DCB510 /* chasingFITnessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276BEAA1C40958200DCB510 /* chasingFITnessUITests.m */; };
+		027DA2101CAE1B62007FE515 /* chasingFit.png in Resources */ = {isa = PBXBuildFile; fileRef = 027DA20F1CAE1B62007FE515 /* chasingFit.png */; };
+		027DA2131CAE3DD1007FE515 /* MenuListOfExercises.m in Sources */ = {isa = PBXBuildFile; fileRef = 027DA2121CAE3DD1007FE515 /* MenuListOfExercises.m */; };
 		028111A61C643606007DE964 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 028111A51C643606007DE964 /* playButton.png */; };
 		028111B81C644914007DE964 /* Explosive burpees.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B21C644914007DE964 /* Explosive burpees.mov */; };
 		028111B91C644914007DE964 /* Front and Side step shuffle.mov in Resources */ = {isa = PBXBuildFile; fileRef = 028111B31C644914007DE964 /* Front and Side step shuffle.mov */; };
@@ -162,6 +164,9 @@
 		0276BEA61C40958200DCB510 /* chasingFITnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chasingFITnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0276BEAA1C40958200DCB510 /* chasingFITnessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chasingFITnessUITests.m; sourceTree = "<group>"; };
 		0276BEAC1C40958200DCB510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		027DA20F1CAE1B62007FE515 /* chasingFit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chasingFit.png; sourceTree = "<group>"; };
+		027DA2111CAE3DD1007FE515 /* MenuListOfExercises.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuListOfExercises.h; sourceTree = "<group>"; };
+		027DA2121CAE3DD1007FE515 /* MenuListOfExercises.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuListOfExercises.m; sourceTree = "<group>"; };
 		028111A51C643606007DE964 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
 		028111B21C644914007DE964 /* Explosive burpees.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Explosive burpees.mov"; sourceTree = "<group>"; };
 		028111B31C644914007DE964 /* Front and Side step shuffle.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Front and Side step shuffle.mov"; sourceTree = "<group>"; };
@@ -318,6 +323,8 @@
 				02747D0F1C40E54A0023D9C8 /* ListOfExercises.h */,
 				02747D101C40E54A0023D9C8 /* ListOfExercises.m */,
 				021BC1621C79C7DF009CEC4C /* Main.storyboard */,
+				027DA2111CAE3DD1007FE515 /* MenuListOfExercises.h */,
+				027DA2121CAE3DD1007FE515 /* MenuListOfExercises.m */,
 				02E3F3EA1CA929D300F3EDD0 /* ContactsViewController.h */,
 				02E3F3EB1CA929D300F3EDD0 /* ContactsViewController.m */,
 				029590B01C61CD3700B2F304 /* readData.h */,
@@ -366,6 +373,7 @@
 				028111D71C644A8C007DE964 /* Full Body */,
 				02E3F4471CA9431900F3EDD0 /* Full Body Image */,
 				028111A51C643606007DE964 /* playButton.png */,
+				027DA20F1CAE1B62007FE515 /* chasingFit.png */,
 				029590BB1C61F77900B2F304 /* intro.mov */,
 				028926D31C4E2A580059C2A4 /* chasingFIT logotypeBLACK.png */,
 				028926D41C4E2A580059C2A4 /* chasingFIT logotypeWHITE.png */,
@@ -723,6 +731,7 @@
 				028111DF1C644AD7007DE964 /* Dumbbell walking lunges.mov in Resources */,
 				02DBD90F1C4428DD001DAA83 /* Core_Icon.jpg in Resources */,
 				02E3F4441CA9431400F3EDD0 /* Standing dumbbell woodchop.jpg in Resources */,
+				027DA2101CAE1B62007FE515 /* chasingFit.png in Resources */,
 				02D99A381C7D991A00173D7C /* VideoCustomView.xib in Resources */,
 				02E3F4271CA942BB00F3EDD0 /* Alternating frontal and lateral deltoid lifts.jpg in Resources */,
 				028111D11C644A86007DE964 /* Dumbbell squat to twisting millitary press.mov in Resources */,
@@ -781,6 +790,7 @@
 				024383861C462675007BCE3F /* ListOfPractices.m in Sources */,
 				0276BE8A1C40958200DCB510 /* ViewController.m in Sources */,
 				026B017F1C48A36B005FED38 /* collectionCell.m in Sources */,
+				027DA2131CAE3DD1007FE515 /* MenuListOfExercises.m in Sources */,
 				029590BF1C6203B300B2F304 /* buildWorkoutViewController.m in Sources */,
 				0276BE871C40958200DCB510 /* AppDelegate.m in Sources */,
 				0276BE841C40958200DCB510 /* main.m in Sources */,
@@ -919,6 +929,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = chasingFITness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Patera.chasingFITness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -935,6 +946,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = chasingFITness/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Patera.chasingFITness;
 				PRODUCT_NAME = "$(TARGET_NAME)";

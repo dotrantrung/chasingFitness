@@ -20,6 +20,7 @@
     NSString *nameImage = [NSString stringWithFormat:@"%@.jpg",name];
     UIImage *thumnail =[UIImage imageNamed:nameImage];
     [self.exerciseImage setImage:thumnail];
+    self.numberPickedLabel.hidden = true;
 }
 
 //-(UIImage *)generateThumbImage : (NSString *)filepath

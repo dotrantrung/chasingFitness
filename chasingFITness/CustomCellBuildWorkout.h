@@ -12,5 +12,6 @@
 @interface CustomCellBuildWorkout : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImage;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberPickedLabel;
 -(void) loadImage:(NSString*) name;
 @end

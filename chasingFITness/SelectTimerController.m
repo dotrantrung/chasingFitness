@@ -48,10 +48,9 @@
     cell.textAlignment= UITextAlignmentCenter;
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ seconds", [timeOptionArray objectAtIndex:indexPath.row]];
-    if (indexPath.row < 3)
-        cell.textLabel.textColor = [UIColor redColor];
-    else
-        cell.textLabel.textColor = [UIColor blackColor];
+    cell.textLabel.textColor = [UIColor redColor];
+    cell.contentView.backgroundColor = [UIColor blackColor];
+    
     if (indexPath.row == 0){
         [self.timeSelectionTable selectRowAtIndexPath:indexPath animated:YES  scrollPosition:UITableViewScrollPositionBottom];
         [self.timeSelectionTable cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;

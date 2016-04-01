@@ -105,13 +105,15 @@
     
     if ([self.cellSelected containsObject:indexPath])
     {
+        cell.numberPickedLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)[self.cellSelected indexOfObject:indexPath]+1 ];
         cell.backgroundColor = [UIColor lightGrayColor];
-
+        cell.numberPickedLabel.hidden = false;
     }
     else
     {
+        cell.numberPickedLabel.text = @"";
         cell.backgroundColor = [UIColor whiteColor];
-
+       cell.numberPickedLabel.hidden  = true;
     }
     return cell;
 }
@@ -154,11 +156,13 @@
 
     if ([self.cellSelected containsObject:indexPath])
     {
+        
         [self.cellSelected removeObject:indexPath];
         [self.namePracticesSelected removeObject:cellText ];
     }
     else
     {
+       
         [self.cellSelected addObject:indexPath];
         [self.namePracticesSelected addObject:cellText ];
     }

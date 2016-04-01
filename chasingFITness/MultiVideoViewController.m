@@ -9,7 +9,6 @@
 #import "MultiVideoViewController.h"
 
 @interface MultiVideoViewController ()
-
 @end
 
 @implementation MultiVideoViewController
@@ -20,22 +19,42 @@
 //    self.playerList = [[NSMutableArray alloc]init ];
 //    self.playerViewList = [[NSMutableArray alloc]init ];
 //
-    self.clockTimer.hidden = true;
+    [self setUpLabel];
+    
+    [self createAllViewScrollView];
+}
+-(void) setUpLabel{
+    //self.clockTimer.hidden = true;
+    if (self.setTime <= 60)
+        self.breakTime = 30;
+    else self.breakTime = 45;
+    
+    if (self.setTime <= 60)
+        self.transitionTime = 75;
+    else self.transitionTime = 120;
+    
+    self.setTime=2;
+    self.breakTime = 2;
+    self.transitionTime = 2;
+    
+    
+    self.currentExerciseIndex = 0;
     self.timerLabel.numberOfLines=0;
     self.timerLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-    [self createAllViewScrollView];
 }
 - (IBAction)tapStartTimer:(id)sender {
     [self initializeTimer];
     self.startButton.hidden = true;
 }
 - (void) initializeTimer{
-    self.breakTime = 15;
+    
+    
     self.timer = self.setTime;
     self.tempNumOfSet = 1;
     self.clockTimer.hidden = false;
     self.timerLabel.text = [NSString stringWithFormat:@"Set %d / %d",self.tempNumOfSet,self.numberOfSet];
     self.clockTimer.text = [NSString stringWithFormat:@"%d",self.timer];
+    self.progressLabel.text = [NSString stringWithFormat:@"#%d: %@",self.currentExerciseIndex +1,[self.multiplePracticesArray objectAtIndex:self.currentExerciseIndex]];
     self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setTimer) userInfo:nil repeats:YES];
 }
 - (void) setTimer{
@@ -43,28 +62,56 @@
     
     self.timerLabel.text = [NSString stringWithFormat:@"Set %d / %d",self.tempNumOfSet,self.numberOfSet];
     self.clockTimer.text = [NSString stringWithFormat:@"%d",self.timer];
-    if (self.tempNumOfSet > self.numberOfSet){
-        self.startButton.hidden = false;
-        self.clockTimer.hidden = true;
-        return;
+    if (self.tempNumOfSet <= self.numberOfSet && self.timer == 0){
+            [self.timerObject invalidate];
+            self.timer = self.breakTime;
+        
+            self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(breakTimer) userInfo:nil repeats:YES];
     }
-    if (self.timer == 0){
-        [self.timerObject invalidate];
-        self.timer = self.breakTime;
-        NSLog(@"%d",self.breakTime);
-        self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(breakTimer) userInfo:nil repeats:YES];
-    }
+    
 }
 - (void) breakTimer{
     self.timer --;
     self.timerLabel.text = [NSString stringWithFormat:@"BREAK \n [%d set(s) left]",(self.numberOfSet - self.tempNumOfSet)];
     self.clockTimer.text = [NSString stringWithFormat:@"%d",self.timer];
-
+    
     if (self.timer == 0){
         self.tempNumOfSet++;
         [self.timerObject invalidate];
+        if (self.tempNumOfSet > self.numberOfSet){
+            self.timer = self.transitionTime;
+            self.currentExerciseIndex ++;
+            if (self.currentExerciseIndex < [self.multiplePracticesArray count]){
+                self.timerLabel.text = [NSString stringWithFormat:@"Next exercise will start in"];
+                self.progressLabel.text = [NSString stringWithFormat:@"NEXT EXERCISE: %@",[self.multiplePracticesArray objectAtIndex:self.currentExerciseIndex ]];
+                self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(transitionTimer) userInfo:nil repeats:YES];
+            }
+            else
+            {
+                self.startButton.hidden = false;
+                [self.startButton setTitle: [NSString stringWithFormat:@"Restart work-out session"] forState:UIControlStateNormal];
+                self.currentExerciseIndex = 0;
+                
+            }
+            return;
+        }
+        else{
         self.timer = self.setTime;
         self.timerObject = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setTimer) userInfo:nil repeats:YES];
+        }
+    }
+}
+-(void) transitionTimer{
+    self.timer --;
+    self.clockTimer.text = [NSString stringWithFormat:@"%d",self.timer];
+
+    if (self.timer == 0){
+        [self.timerObject invalidate];
+        self.startButton.hidden = false;
+        if (self.currentExerciseIndex < [self.multiplePracticesArray count]){
+            [self.startButton setTitle: [NSString stringWithFormat:@"START next exercise: %@", [self.multiplePracticesArray objectAtIndex:self.currentExerciseIndex]] forState:UIControlStateNormal];
+        }
+        return;
     }
 }
 - (void)loadView:(NSString*) exerciseName withIndex:(int) index{
