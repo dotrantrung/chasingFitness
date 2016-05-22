@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 
 @interface CustomCellBuildWorkout : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImage;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberPickedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hiddenPurchaseLabel;
 -(void) loadImage:(NSString*) name;
 @end

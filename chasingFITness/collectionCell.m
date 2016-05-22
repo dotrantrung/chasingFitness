@@ -28,8 +28,16 @@
     
     
 }
--(void) hiddenView{
+-(void) hideView{
     hiddenView.hidden = false;
+    [label setText:@"Purchase for full access"];
+    [label setTextColor:[UIColor whiteColor]];
+}
+-(void) showView:(NSString*)videoName{
+    hiddenView.hidden = true;
+    [label setText:videoName];
+    [label setTextColor:[UIColor whiteColor]];
+
 }
 
 @end

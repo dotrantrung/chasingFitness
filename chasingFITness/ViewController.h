@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ListOfExercises.h"
+#import <StoreKit/StoreKit.h>
 #import "buildWorkoutViewController.h"
-@interface ViewController : UIViewController //<UITableViewDataSource, UITableViewDelegate>
-//@property (weak, nonatomic) IBOutlet myMenuView *menuView;
+#import "PurchaseViewController.h"
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 @property (weak, nonatomic) IBOutlet UIView *videoView;
 @property (weak, nonatomic) IBOutlet UIButton *purchaseButton;
-
 @end
 

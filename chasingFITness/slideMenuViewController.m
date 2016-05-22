@@ -20,7 +20,7 @@
 }
 -(void) viewDidLoad{
     [super viewDidLoad];
-    menu = @[@"Home",@"List of Exercises",@"Saved Routines", @"Contacts"];
+    menu = @[@"Home",@"List of Exercises",@"Saved Routines", @"FAQ",@"Contacts"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }

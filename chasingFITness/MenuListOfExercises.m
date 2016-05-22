@@ -65,7 +65,28 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    NSArray* a;
+    switch (section){
+        case 0:
+            a = agility;
+            break;
+        case 1:
+            a = core;
+            break;
+        case 2:
+            a = fullbody;
+            break;
+        case 3:
+            a = lowerbody;
+            break;
+        case 4:
+            a = upperbody;
+            break;
+        default:
+            break;
+    };
+    
+    return [a count];
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [listBodyPart objectAtIndex:(int) section];
@@ -106,8 +127,19 @@
     
     cell.exerciseNameLabel.textColor = [UIColor blackColor];
     cell.backgroundColor = [UIColor whiteColor];
-    
-    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"purchased"]) {
+        if (indexPath.row == 0){
+            cell.hiddenPurchaseLabel.hidden = true;
+            
+        }
+        else{
+            cell.hiddenPurchaseLabel.hidden = false;
+        }
+    }
+    else {
+        cell.hiddenPurchaseLabel.hidden = true;
+    }
+    cell.userInteractionEnabled = NO;
     
     return cell;
 }

@@ -66,7 +66,6 @@
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ListOfPractices *practicesView = (ListOfPractices *) [storyboard instantiateViewControllerWithIdentifier:@"ListOfPractices"];
-    practicesView.titleLabel.text =[listNameArray objectAtIndex:indexPath.row];
     practicesView.nameOfPractice = [NSString stringWithFormat:@"%@",[listNameArray objectAtIndex:indexPath.row] ];
 //    
 //    // Have the transition do a horizontal flip - my personal fav

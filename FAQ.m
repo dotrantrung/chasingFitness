@@ -1,26 +1,32 @@
 //
-//  NavigationViewController.m
+//  FAQ.m
 //  chasingFITness
 //
-//  Created by Trung Do on 2/24/16.
+//  Created by Trung Do on 5/9/16.
 //  Copyright © 2016 Patera. All rights reserved.
 //
 
-#import "NavigationViewController.h"
+#import "FAQ.h"
+#import "SWRevealViewController.h"
 
-@interface NavigationViewController ()
+
+@interface FAQ ()
 
 @end
 
-@implementation NavigationViewController
+@implementation FAQ
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationBar.translucent = NO;
-
+    self.navigationController.navigationBar.translucent = NO;
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sideBarButton setTarget: self.revealViewController];
+        [self.sideBarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

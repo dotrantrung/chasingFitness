@@ -59,8 +59,29 @@
     // header.contentView.backgroundColor = [UIColor blackColor];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{    
-    return 6;
+{
+    NSArray* a;
+    switch (section){
+        case 0:
+            a = agility;
+            break;
+        case 1:
+            a = core;
+            break;
+        case 2:
+            a = fullbody;
+            break;
+        case 3:
+            a = lowerbody;
+            break;
+        case 4:
+            a = upperbody;
+            break;
+        default:
+            break;
+    };
+
+    return [a count];
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [listBodyPart objectAtIndex:(int) section];
@@ -101,7 +122,22 @@
 
     cell.exerciseNameLabel.textColor = [UIColor blackColor];
     cell.backgroundColor = [UIColor whiteColor];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"purchased"]) {
+        if (indexPath.row == 0){
+            cell.hiddenPurchaseLabel.hidden = true;
+            cell.userInteractionEnabled = YES;
 
+        }
+        else{
+            cell.hiddenPurchaseLabel.hidden = false;
+            cell.userInteractionEnabled = NO;
+           // cell.selectionStyle =UITableViewCellSelectionStyle.None;
+        }
+    }
+    else {
+        cell.hiddenPurchaseLabel.hidden = true;
+        cell.userInteractionEnabled = YES;
+    }
     
     if ([self.cellSelected containsObject:indexPath])
     {
@@ -120,7 +156,7 @@
 
 - (IBAction)moveToTimerSelection:(id)sender {
     if ([self.namePracticesSelected count] == 0){
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Practice more?" message:@"Choose more than 0 practice to build your workout session."
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"EXERCISE ?" message:@"Choose an exercise to build your workout session."
                                     preferredStyle:UIAlertControllerStyleAlert];
         //We add buttons to the alert controller by creating UIAlertActions:
         UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
@@ -153,7 +189,8 @@
     //the below code will allow multiple selection
     CustomCellBuildWorkout *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *cellText = selectedCell.exerciseNameLabel.text;
-
+   
+    
     if ([self.cellSelected containsObject:indexPath])
     {
         

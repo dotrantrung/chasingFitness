@@ -25,7 +25,6 @@
     self.imageCollection.dataSource = self;
 
     
-    self.titleLabel.text = self.nameOfPractice;
    
     [self findListOfVideoByName:self.nameOfPractice];
     
@@ -54,8 +53,15 @@
     cell.selected = NO;
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"purchased"]){
         if (indexPath.row!=0){
-            [cell hiddenView];
+            [cell hideView];
         }
+        else{
+            [cell showView:listVideoName[indexPath.row]];
+        }
+    }
+    else{
+        [cell showView:listVideoName[indexPath.row]];
+        
     }
     return cell;
 }

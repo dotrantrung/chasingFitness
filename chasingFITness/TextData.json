@@ -7,6 +7,11 @@
                         "name":"Explosive burpees",
                         "description":"\t•Put your body out flat in a hand plank position\n\t•Lift your knees up as high as you can when you jump"
                      },
+                    {
+                    "bodypart":"AGILITY",
+                    "name":"Ladder Drills",
+                    "description":"\t•Try and match arm speed with leg speed\n\t•One foot in the ladder followed by the next foot. Then the same foot that first went in, take it out, followed by the other"
+                    },
                      {
                         "bodypart":"AGILITY",
                         "name": "Front and Side step shuffle",

@@ -15,6 +15,8 @@
 }
 -(void) loadCell: (NSString*)name;
              //and: (NSString*) imagePath;
--(void) hiddenView;
+-(void) hideView;
+-(void) showView:(NSString*) videoName;
+
 
 @end

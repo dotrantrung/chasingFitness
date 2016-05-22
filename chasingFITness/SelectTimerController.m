@@ -23,15 +23,42 @@
    // timeOptionArray = [[NSArray alloc] initWithObjects:30 ,45, 60,75, 90,120, nil];
     timeOptionArray = @[@30, @45, @60, @75, @90, @120];
 
-        self.titleLabel.text = [NSString stringWithFormat:@"Set time for %lu practices",[self.multiplePracticesArray count]];
+  [self test];
     for (int i=0; i < [self.multiplePracticesArray count]; i++){
             NSLog(@"%@\n",[self.multiplePracticesArray objectAtIndex:i]);
         
     }
     self.numSet = 4;
     self.selectedTime = 30;
+    self.navigationItem.title = @"Time for each set";
     self.timeSelectionTable.delegate = self;
     self.timeSelectionTable.dataSource = self;
+}
+-(void) test{
+    NSUserDefaults *currentDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [currentDefaults objectForKey:@"RoutineSaved"];
+    if (dataRepresentingSavedArray != nil)
+    {
+    NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+    NSLog(@"Size: %lu", [oldSavedArray count]);
+    //    if (oldSavedArray != nil)
+//        objectArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+//    else
+//        objectArray = [[NSMutableArray alloc] init];
+}
+//    NSUserDefaults *currentDefaults = [NSUserDefaults standardUserDefaults];
+//    NSData *dataRepresentingSavedArray = [currentDefaults objectForKey:@"savedArray"];
+//    NSMutableArray *objectArray;
+//    if (dataRepresentingSavedArray != nil)
+//    {
+//        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+//       // NSLog(@"Size: %lu", [oldSavedArray count]);
+//
+////        if (oldSavedArray != nil)
+////            objectArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+////        else
+////            objectArray = [[NSMutableArray alloc] init];
+//    }
 }
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [timeOptionArray count];
@@ -45,19 +72,18 @@
         cell = [[UITableViewCell alloc]initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textAlignment= UITextAlignmentCenter;
+    cell.textAlignment = NSTextAlignmentCenter;
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ seconds", [timeOptionArray objectAtIndex:indexPath.row]];
     cell.textLabel.textColor = [UIColor redColor];
+    cell.backgroundColor = [UIColor blackColor];
     cell.contentView.backgroundColor = [UIColor blackColor];
-    
+
     if (indexPath.row == 0){
         [self.timeSelectionTable selectRowAtIndexPath:indexPath animated:YES  scrollPosition:UITableViewScrollPositionBottom];
         [self.timeSelectionTable cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
     }
 
-    cell.contentView.backgroundColor = [UIColor whiteColor];
-    cell.backgroundColor = [UIColor whiteColor];
     
     
     
